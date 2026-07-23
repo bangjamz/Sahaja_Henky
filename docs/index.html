@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Sahaja — Prototype Gallery</title>
+<title>Sahaja — Prototype Aplikasi</title>
 <style>
   :root {
     --bg: #f7f9ff;
@@ -21,17 +21,37 @@
     color: var(--text);
   }
   header {
-    padding: 40px 24px 24px;
+    padding: 48px 24px 28px;
     text-align: center;
   }
   header h1 {
     margin: 0 0 8px;
-    font-size: 28px;
+    font-size: 30px;
     color: var(--accent);
   }
   header p {
-    margin: 0;
+    margin: 0 auto;
+    max-width: 520px;
     color: var(--muted);
+  }
+  .cta {
+    display: block;
+    width: fit-content;
+    margin: 24px auto 0;
+    padding: 14px 32px;
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 999px;
+    font-size: 15px;
+    box-shadow: 0 8px 20px rgba(0,103,102,0.25);
+  }
+  .flow-note {
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 12px;
   }
   section {
     max-width: 1100px;
@@ -39,7 +59,7 @@
     padding: 16px 24px 48px;
   }
   section h2 {
-    font-size: 16px;
+    font-size: 15px;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     color: var(--muted);
@@ -53,6 +73,7 @@
     gap: 16px;
   }
   a.card {
+    position: relative;
     display: block;
     background: var(--card);
     border: 1px solid var(--border);
@@ -65,6 +86,17 @@
   a.card:hover {
     transform: translateY(-4px);
     box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  }
+  .step {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background: rgba(18,29,38,0.75);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 999px;
   }
   .thumb {
     width: 100%;
@@ -82,58 +114,54 @@
 </head>
 <body>
 <header>
-  <h1>Sahaja — Prototype Frontend</h1>
-  <p>Klik salah satu layar untuk membuka prototype interaktifnya.</p>
+  <h1>Sahaja — Prototype Aplikasi</h1>
+  <p>Klik "Mulai Prototype" untuk menjelajah aplikasi urut sesuai alur pengguna sebenarnya — dari aktivasi, consent, pretest, sesi belajar, forum, sampai posttest &amp; sertifikat.</p>
+  <a class="cta" href="splash_walkthrough_2_v2/">Mulai Prototype &rarr;</a>
+  <p class="flow-note">Setiap layar punya tombol navigasi (&larr; / &rarr;) di bagian bawah untuk lanjut ke layar berikutnya.</p>
 </header>
 <section>
 
-  <h2>Onboarding</h2>
+  <h2>1. Onboarding & Aktivasi</h2>
   <div class="grid">
-    <a class="card" href="splash_walkthrough_2_v1/"><img class="thumb" src="splash_walkthrough_2_v1/screen.png"/><div class="label">Splash & Walkthrough 2 (v1)</div></a>
-    <a class="card" href="splash_walkthrough_2_v2/"><img class="thumb" src="splash_walkthrough_2_v2/screen.png"/><div class="label">Splash & Walkthrough 2 (v2)</div></a>
-    <a class="card" href="splash_walkthrough_final_v1/"><img class="thumb" src="splash_walkthrough_final_v1/screen.png"/><div class="label">Splash Final (v1)</div></a>
-    <a class="card" href="splash_walkthrough_final_v2/"><img class="thumb" src="splash_walkthrough_final_v2/screen.png"/><div class="label">Splash Final (v2)</div></a>
+    <a class="card" href="splash_walkthrough_2_v2/"><span class="step">1</span><img class="thumb" src="splash_walkthrough_2_v2/screen.png"/><div class="label">Splash & Walkthrough</div></a>
+    <a class="card" href="splash_walkthrough_final_v2/"><span class="step">2</span><img class="thumb" src="splash_walkthrough_final_v2/screen.png"/><div class="label">Splash Final</div></a>
+    <a class="card" href="masukkan_kode_aktivasi/"><span class="step">3</span><img class="thumb" src="masukkan_kode_aktivasi/screen.png"/><div class="label">Kode Aktivasi</div></a>
+    <a class="card" href="persetujuan_siswa/"><span class="step">4</span><img class="thumb" src="persetujuan_siswa/screen.png"/><div class="label">Persetujuan (Consent)</div></a>
+    <a class="card" href="buat_nama_samaran/"><span class="step">5</span><img class="thumb" src="buat_nama_samaran/screen.png"/><div class="label">Nama Samaran</div></a>
+    <a class="card" href="tur_singkat/"><span class="step">6</span><img class="thumb" src="tur_singkat/screen.png"/><div class="label">Tur Aplikasi</div></a>
   </div>
 
-  <h2>Persiapan & Aktivasi</h2>
+  <h2>2. Pretest (Instrumen Penelitian)</h2>
   <div class="grid">
-    <a class="card" href="intro_pretest/"><img class="thumb" src="intro_pretest/screen.png"/><div class="label">Intro Pretest</div></a>
-    <a class="card" href="persetujuan_siswa/"><img class="thumb" src="persetujuan_siswa/screen.png"/><div class="label">Persetujuan Siswa</div></a>
-    <a class="card" href="buat_nama_samaran/"><img class="thumb" src="buat_nama_samaran/screen.png"/><div class="label">Buat Nama Samaran</div></a>
-    <a class="card" href="masukkan_kode_aktivasi/"><img class="thumb" src="masukkan_kode_aktivasi/screen.png"/><div class="label">Masukkan Kode Aktivasi</div></a>
-    <a class="card" href="tur_singkat/"><img class="thumb" src="tur_singkat/screen.png"/><div class="label">Tur Singkat</div></a>
+    <a class="card" href="intro_pretest/"><span class="step">7</span><img class="thumb" src="intro_pretest/screen.png"/><div class="label">Intro Pretest</div></a>
+    <a class="card" href="soal_pengetahuan/"><span class="step">8</span><img class="thumb" src="soal_pengetahuan/screen.png"/><div class="label">Pretest: Pengetahuan</div></a>
+    <a class="card" href="soal_sikap/"><span class="step">9</span><img class="thumb" src="soal_sikap/screen.png"/><div class="label">Pretest: Sikap</div></a>
   </div>
 
-  <h2>Beranda & Pembelajaran</h2>
+  <h2>3. Beranda & Sesi Belajar (8 Sesi CBT)</h2>
   <div class="grid">
-    <a class="card" href="beranda/"><img class="thumb" src="beranda/screen.png"/><div class="label">Beranda</div></a>
-    <a class="card" href="peta_belajar/"><img class="thumb" src="peta_belajar/screen.png"/><div class="label">Peta Belajar</div></a>
-    <a class="card" href="detail_sesi_3/"><img class="thumb" src="detail_sesi_3/screen.png"/><div class="label">Detail Sesi 3</div></a>
-    <a class="card" href="player_materi/"><img class="thumb" src="player_materi/screen.png"/><div class="label">Player Materi</div></a>
+    <a class="card" href="beranda/"><span class="step">10</span><img class="thumb" src="beranda/screen.png"/><div class="label">Beranda</div></a>
+    <a class="card" href="peta_belajar/"><span class="step">11</span><img class="thumb" src="peta_belajar/screen.png"/><div class="label">Peta Belajar</div></a>
+    <a class="card" href="detail_sesi_3/"><span class="step">12</span><img class="thumb" src="detail_sesi_3/screen.png"/><div class="label">Detail Sesi</div></a>
+    <a class="card" href="player_materi/"><span class="step">13</span><img class="thumb" src="player_materi/screen.png"/><div class="label">Player Materi</div></a>
+    <a class="card" href="kuis_sesi/"><span class="step">14</span><img class="thumb" src="kuis_sesi/screen.png"/><div class="label">Kuis Sesi</div></a>
+    <a class="card" href="worksheet_cbt/"><span class="step">15</span><img class="thumb" src="worksheet_cbt/screen.png"/><div class="label">Worksheet CBT</div></a>
+    <a class="card" href="jurnalku/"><span class="step">16</span><img class="thumb" src="jurnalku/screen.png"/><div class="label">Jurnalku</div></a>
   </div>
 
-  <h2>Kuis & Evaluasi</h2>
+  <h2>4. Forum Diskusi Termoderasi (Sesi 6)</h2>
   <div class="grid">
-    <a class="card" href="soal_sikap/"><img class="thumb" src="soal_sikap/screen.png"/><div class="label">Soal Sikap</div></a>
-    <a class="card" href="soal_pengetahuan/"><img class="thumb" src="soal_pengetahuan/screen.png"/><div class="label">Soal Pengetahuan</div></a>
-    <a class="card" href="kuis_sesi/"><img class="thumb" src="kuis_sesi/screen.png"/><div class="label">Kuis Sesi</div></a>
-    <a class="card" href="worksheet_cbt/"><img class="thumb" src="worksheet_cbt/screen.png"/><div class="label">Worksheet CBT</div></a>
-    <a class="card" href="posttest_penutup/"><img class="thumb" src="posttest_penutup/screen.png"/><div class="label">Posttest Penutup</div></a>
-    <a class="card" href="sertifikat/"><img class="thumb" src="sertifikat/screen.png"/><div class="label">Sertifikat</div></a>
+    <a class="card" href="daftar_forum/"><span class="step">17</span><img class="thumb" src="daftar_forum/screen.png"/><div class="label">Daftar Forum</div></a>
+    <a class="card" href="detail_thread/"><span class="step">18</span><img class="thumb" src="detail_thread/screen.png"/><div class="label">Detail Thread</div></a>
+    <a class="card" href="tulis_post/"><span class="step">19</span><img class="thumb" src="tulis_post/screen.png"/><div class="label">Tulis Post</div></a>
   </div>
 
-  <h2>Komunitas & Jurnal</h2>
+  <h2>5. Posttest, Sertifikat & Penutup</h2>
   <div class="grid">
-    <a class="card" href="jurnalku/"><img class="thumb" src="jurnalku/screen.png"/><div class="label">Jurnalku</div></a>
-    <a class="card" href="daftar_forum/"><img class="thumb" src="daftar_forum/screen.png"/><div class="label">Daftar Forum</div></a>
-    <a class="card" href="detail_thread/"><img class="thumb" src="detail_thread/screen.png"/><div class="label">Detail Thread</div></a>
-    <a class="card" href="tulis_post/"><img class="thumb" src="tulis_post/screen.png"/><div class="label">Tulis Post</div></a>
-  </div>
-
-  <h2>Lainnya</h2>
-  <div class="grid">
-    <a class="card" href="angket_kepuasan/"><img class="thumb" src="angket_kepuasan/screen.png"/><div class="label">Angket Kepuasan</div></a>
-    <a class="card" href="profil/"><img class="thumb" src="profil/screen.png"/><div class="label">Profil</div></a>
+    <a class="card" href="posttest_penutup/"><span class="step">20</span><img class="thumb" src="posttest_penutup/screen.png"/><div class="label">Posttest & Penutup</div></a>
+    <a class="card" href="sertifikat/"><span class="step">21</span><img class="thumb" src="sertifikat/screen.png"/><div class="label">Sertifikat</div></a>
+    <a class="card" href="angket_kepuasan/"><span class="step">22</span><img class="thumb" src="angket_kepuasan/screen.png"/><div class="label">Angket Kepuasan</div></a>
+    <a class="card" href="profil/"><span class="step">23</span><img class="thumb" src="profil/screen.png"/><div class="label">Profil</div></a>
   </div>
 
 </section>
