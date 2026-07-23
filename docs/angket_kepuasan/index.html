@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Survei Kepuasan - Sahaja</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#75340b",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed-dim": "#ffb691",
+                        "inverse-on-surface": "#e8f2ff",
+                        "secondary-container": "#316fe2",
+                        "primary-fixed": "#88f4f2",
+                        "surface": "#f7f9ff",
+                        "on-tertiary-fixed": "#341100",
+                        "inverse-surface": "#27313c",
+                        "primary-container": "#008281",
+                        "on-surface-variant": "#3d4949",
+                        "error": "#ba1a1a",
+                        "surface-container": "#e4effd",
+                        "surface-container-highest": "#d9e3f1",
+                        "on-primary-fixed": "#002020",
+                        "secondary-fixed": "#d9e2ff",
+                        "on-secondary-fixed-variant": "#00429c",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "background": "#f7f9ff",
+                        "outline": "#6d7979",
+                        "outline-variant": "#bcc9c8",
+                        "on-primary-container": "#f3fffe",
+                        "on-secondary-container": "#fefcff",
+                        "surface-tint": "#006a69",
+                        "tertiary-container": "#ae6035",
+                        "tertiary": "#8f481f",
+                        "primary": "#006766",
+                        "on-tertiary-container": "#fffbff",
+                        "on-error": "#ffffff",
+                        "inverse-primary": "#6bd7d6",
+                        "on-surface": "#121d26",
+                        "surface-container-high": "#dfe9f7",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed": "#ffdbcb",
+                        "on-secondary-fixed": "#001945",
+                        "surface-bright": "#f7f9ff",
+                        "surface-variant": "#d9e3f1",
+                        "secondary": "#0055c7",
+                        "error-container": "#ffdad6",
+                        "primary-fixed-dim": "#6bd7d6",
+                        "on-primary": "#ffffff",
+                        "surface-dim": "#d1dbe8",
+                        "on-background": "#121d26",
+                        "on-primary-fixed-variant": "#00504f",
+                        "surface-container-low": "#edf4ff",
+                        "secondary-fixed-dim": "#b0c6ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "sm": "12px",
+                        "xs": "8px",
+                        "lg": "24px",
+                        "md": "16px",
+                        "xl": "32px",
+                        "gutter": "16px",
+                        "margin-mobile": "20px",
+                        "base": "4px"
+                    },
+                    "fontFamily": {
+                        "subtitle-lg": ["Plus Jakarta Sans"],
+                        "label-md": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "headline-lg-mobile": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "subtitle-lg": ["18px", { "lineHeight": "26px", "fontWeight": "600" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "700" }],
+                        "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["22px", { "lineHeight": "28px", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .star-rating .material-symbols-outlined {
+            font-size: 36px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .star-rating .material-symbols-outlined:active {
+            transform: scale(0.85);
+        }
+        /* Hide scrollbar for clean UI */
+        ::-webkit-scrollbar { display: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background antialiased flex flex-col items-center justify-start min-h-screen">
+<!-- Mobile Container (Max Width) -->
+<div class="w-full max-w-md bg-background min-h-screen relative flex flex-col shadow-lg">
+<!-- App Bar (Transactional/Task Focused - BottomNav suppressed) -->
+<header class="flex justify-between items-center px-margin-mobile h-14 w-full sticky top-0 bg-surface/90 backdrop-blur-md z-50">
+<button class="w-10 h-10 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-variant transition-colors active:scale-95">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="font-headline-md text-headline-md text-on-surface">Survei Kepuasan</h1>
+<div class="w-10 h-10"></div> <!-- Placeholder to balance flex-between -->
+</header>
+<!-- Main Content Scrollable Area -->
+<main class="flex-1 overflow-y-auto flex flex-col px-margin-mobile py-6 gap-6">
+<!-- Intro Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-[0px_4px_20px_rgba(18,29,38,0.05)] p-5 flex items-center gap-4">
+<img class="w-16 h-16 object-contain flex-shrink-0" data-alt="A highly detailed vector illustration of 'Saja', a friendly teenage mascot wearing a teal hoodie, smiling warmly while holding a small clipboard and a pencil. The style is modern, approachable, and uses soft organic shapes suitable for early adolescence, set against a very subtle light blue circular background. Soft lighting, friendly expression." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBO6o67lRkLJ83oaUwWnM7iqhLBs_82HygS198HCW2HL5xNWBG0ZtSYWMuFJ0phBvMe044YRbZAUDpp9AHkM9KelxodXATnist8GM7YAy7hyNOJXWGsrOSH9GqF-HnPnHTQB5TuOjItmLM6FU5yCtZ2WLKa4tQagDS0h_CbdV8zDW2IsOxLzSevpSWd8zm0Vjh5v_j8mXDXfoxrLv6R7JiTkGHcYD_6hSC7nbHkyHhQTgsIhGi_YBcinw"/>
+<div>
+<h2 class="font-subtitle-lg text-subtitle-lg text-primary">Bantu Sahaja Tumbuh!</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Pendapatmu sangat berharga agar aplikasi ini bisa lebih baik lagi menemanimu.</p>
+</div>
+</div>
+<!-- Survey Questions Container (Glassmorphism inspired soft card) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-[0px_4px_20px_rgba(18,29,38,0.05)] p-5 flex flex-col gap-6">
+<!-- Question 1 -->
+<div class="flex flex-col gap-3">
+<p class="font-body-lg text-body-lg text-on-surface">1. Desain aplikasi mudah dipahami.</p>
+<div class="star-rating flex justify-between items-center w-full px-2 max-w-[280px] mx-auto text-outline-variant">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<hr class="border-surface-variant"/>
+<!-- Question 2 -->
+<div class="flex flex-col gap-3">
+<p class="font-body-lg text-body-lg text-on-surface">2. Materi belajar mudah dibaca.</p>
+<div class="star-rating flex justify-between items-center w-full px-2 max-w-[280px] mx-auto text-outline-variant">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined">star</span>
+</div>
+</div>
+<hr class="border-surface-variant"/>
+<!-- Question 3 -->
+<div class="flex flex-col gap-3">
+<p class="font-body-lg text-body-lg text-on-surface">3. Navigasi menu jelas.</p>
+<div class="star-rating flex justify-between items-center w-full px-2 max-w-[280px] mx-auto text-outline-variant">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined">star</span>
+</div>
+</div>
+<hr class="border-surface-variant"/>
+<!-- Question 4 -->
+<div class="flex flex-col gap-3">
+<p class="font-body-lg text-body-lg text-on-surface">4. Maskot 'Saja' membantu saya.</p>
+<div class="star-rating flex justify-between items-center w-full px-2 max-w-[280px] mx-auto text-outline-variant">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<hr class="border-surface-variant"/>
+<!-- Question 5 -->
+<div class="flex flex-col gap-3">
+<p class="font-body-lg text-body-lg text-on-surface">5. Warna dan tampilan menarik.</p>
+<div class="star-rating flex justify-between items-center w-full px-2 max-w-[280px] mx-auto text-outline-variant">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined">star</span>
+</div>
+</div>
+<hr class="border-surface-variant"/>
+<!-- Question 6 -->
+<div class="flex flex-col gap-3">
+<p class="font-body-lg text-body-lg text-on-surface">6. Forum diskusi mudah digunakan.</p>
+<div class="star-rating flex justify-between items-center w-full px-2 max-w-[280px] mx-auto text-outline-variant">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined">star</span>
+<span class="material-symbols-outlined">star</span>
+</div>
+</div>
+<hr class="border-surface-variant"/>
+<!-- Question 7 -->
+<div class="flex flex-col gap-3">
+<p class="font-body-lg text-body-lg text-on-surface">7. Aplikasi berjalan cepat.</p>
+<div class="star-rating flex justify-between items-center w-full px-2 max-w-[280px] mx-auto text-outline-variant">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined">star</span>
+</div>
+</div>
+<hr class="border-surface-variant"/>
+<!-- Question 8 -->
+<div class="flex flex-col gap-3">
+<p class="font-body-lg text-body-lg text-on-surface">8. Saya merasa aman menggunakan ini.</p>
+<div class="star-rating flex justify-between items-center w-full px-2 max-w-[280px] mx-auto text-outline-variant">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+</div>
+<!-- Suggestions Textarea -->
+<div class="bg-surface-container-lowest rounded-xl shadow-[0px_4px_20px_rgba(18,29,38,0.05)] p-5 flex flex-col gap-3">
+<label class="font-subtitle-lg text-subtitle-lg text-on-surface flex items-center gap-2" for="suggestions">
+<span class="material-symbols-outlined text-primary text-[20px]">edit_note</span>
+                    Saran &amp; Masukan
+                </label>
+<textarea class="w-full rounded-lg border border-outline-variant bg-surface text-on-surface p-4 font-body-md text-body-md focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary placeholder-outline resize-none transition-shadow" id="suggestions" placeholder="Ceritakan pengalamanmu atau beri saran di sini..." rows="4"></textarea>
+</div>
+<!-- Bottom Spacing for Button -->
+<div class="h-6"></div>
+</main>
+<!-- Sticky Bottom Action -->
+<div class="p-margin-mobile pt-2 bg-gradient-to-t from-background via-background to-transparent sticky bottom-0 z-40">
+<button class="w-full h-14 bg-primary text-on-primary font-headline-md text-headline-md rounded-full shadow-[0px_8px_24px_rgba(0,103,102,0.2)] hover:opacity-90 active:scale-[0.98] transition-all flex justify-center items-center gap-2">
+                Kirim Masukan
+                <span class="material-symbols-outlined text-[20px]">send</span>
+</button>
+</div>
+</div>
+<script>
+        // Simple script to handle interactive star rating visually
+        document.querySelectorAll('.star-rating').forEach(container => {
+            const stars = container.querySelectorAll('span');
+            stars.forEach((star, index) => {
+                star.addEventListener('click', () => {
+                    // Update visuals based on click index
+                    stars.forEach((s, i) => {
+                        if (i <= index) {
+                            s.classList.add('text-primary');
+                            s.classList.remove('text-outline-variant');
+                            s.style.fontVariationSettings = "'FILL' 1";
+                        } else {
+                            s.classList.remove('text-primary');
+                            s.classList.add('text-outline-variant');
+                            s.style.fontVariationSettings = "'FILL' 0";
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body></html>

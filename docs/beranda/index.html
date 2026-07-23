@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Beranda - Sahaja</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary-fixed-variant": "#75340b",
+                      "on-error-container": "#93000a",
+                      "tertiary-fixed-dim": "#ffb691",
+                      "inverse-on-surface": "#e8f2ff",
+                      "secondary-container": "#316fe2",
+                      "primary-fixed": "#88f4f2",
+                      "surface": "#f7f9ff",
+                      "on-tertiary-fixed": "#341100",
+                      "inverse-surface": "#27313c",
+                      "primary-container": "#008281",
+                      "on-surface-variant": "#3d4949",
+                      "error": "#ba1a1a",
+                      "surface-container": "#e4effd",
+                      "surface-container-highest": "#d9e3f1",
+                      "on-primary-fixed": "#002020",
+                      "secondary-fixed": "#d9e2ff",
+                      "on-secondary-fixed-variant": "#00429c",
+                      "on-secondary": "#ffffff",
+                      "on-tertiary": "#ffffff",
+                      "background": "#f7f9ff",
+                      "outline": "#6d7979",
+                      "outline-variant": "#bcc9c8",
+                      "on-primary-container": "#f3fffe",
+                      "on-secondary-container": "#fefcff",
+                      "surface-tint": "#006a69",
+                      "tertiary-container": "#ae6035",
+                      "tertiary": "#8f481f",
+                      "primary": "#006766",
+                      "on-tertiary-container": "#fffbff",
+                      "on-error": "#ffffff",
+                      "inverse-primary": "#6bd7d6",
+                      "on-surface": "#121d26",
+                      "surface-container-high": "#dfe9f7",
+                      "surface-container-lowest": "#ffffff",
+                      "tertiary-fixed": "#ffdbcb",
+                      "on-secondary-fixed": "#001945",
+                      "surface-bright": "#f7f9ff",
+                      "surface-variant": "#d9e3f1",
+                      "secondary": "#0055c7",
+                      "error-container": "#ffdad6",
+                      "primary-fixed-dim": "#6bd7d6",
+                      "on-primary": "#ffffff",
+                      "surface-dim": "#d1dbe8",
+                      "on-background": "#121d26",
+                      "on-primary-fixed-variant": "#00504f",
+                      "surface-container-low": "#edf4ff",
+                      "secondary-fixed-dim": "#b0c6ff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "sm": "12px",
+                      "xs": "8px",
+                      "lg": "24px",
+                      "md": "16px",
+                      "xl": "32px",
+                      "gutter": "16px",
+                      "margin-mobile": "20px",
+                      "base": "4px"
+              },
+              "fontFamily": {
+                      "subtitle-lg": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "label-md": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "headline-md": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "headline-lg": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "body-md": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "body-lg": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "headline-lg-mobile": [
+                              "Plus Jakarta Sans"
+                      ]
+              },
+              "fontSize": {
+                      "subtitle-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "26px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-md": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-md": [
+                              "20px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "22px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        body {
+            background-color: #F7F9FB; /* Level 0 Background */
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .soft-shadow {
+            box-shadow: 0px 4px 20px rgba(18, 29, 38, 0.05); /* Level 1 Card Shadow */
+        }
+        .active-shadow {
+            box-shadow: 0px 8px 24px rgba(18, 29, 38, 0.08); /* Level 2 Active Shadow */
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen pb-24 md:pb-0">
+<!-- TopAppBar (Mobile) / Web Nav -->
+<header class="w-full top-0 sticky bg-surface dark:bg-surface flex justify-between items-center px-margin-mobile h-14 z-40 md:hidden">
+<div class="flex items-center gap-xs">
+<img class="w-8 h-8 rounded-full object-cover" data-alt="A friendly, non-judgmental teenage mascot named Saja wearing a teal hoodie, smiling warmly. The illustration style is flat, modern, and vector-based, using a soft teal and white color palette suitable for a middle school health app." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1ijMJouQJAohyFsh6aaWbdjI9jj2Z6j4q_33EZoEELcMpeDIUspr9N7y9fHLM7izn4bJ1VKWQCW5mp4WTvy8n4lcfB8UY5-2O3qG6_z8ezE19vZqF2u-e1AcnSDe1qCDQku3VPTgm38MH2AJfTiynDf93bImNL0tpstf8DfA0ELbvYU5peCMgRuqD3MkMr3UfqadW_-NTvRxbXmbKS-FwHKRtOL5BPqYEvvsgZcqmebqb6MkBMEgpgA"/>
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-primary dark:text-primary-fixed-dim">SAHAJA</span>
+</div>
+<button class="hover:opacity-80 transition-opacity active:scale-95 transition-transform duration-200">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed-dim text-[24px]">notifications</span>
+</button>
+</header>
+<!-- Desktop Top Nav -->
+<header class="hidden md:flex justify-between items-center px-lg py-md bg-surface z-40 border-b border-surface-variant sticky top-0">
+<div class="flex items-center gap-xs">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="A friendly, non-judgmental teenage mascot named Saja wearing a teal hoodie, smiling warmly. The illustration style is flat, modern, and vector-based, using a soft teal and white color palette suitable for a middle school health app." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDM9aPzjuw9RPEgncrTq_-HTBLhgdhiYGfOYvQowdMXYT4wKw3DBGf2M9or3KYH4ZgkVi_46U8Z57WEPqru43rDV8pqjlxuMQb3ApS2CSMCZpmVbGi04oZyMeuvstt1c17IML3BF160FRzmAGn4hH5hWkTDetW62TipNN9LSv3aAAwGymGnjbmK996K4YsA-iINUa4kpZMAJAzbuL3JXCBLXme6eTwhNuy9Rwdb8O1zeHU0yNtfHWgCQQ"/>
+<span class="font-headline-lg text-headline-lg text-primary">SAHAJA</span>
+</div>
+<nav class="flex gap-lg">
+<a class="font-subtitle-lg text-subtitle-lg text-primary border-b-2 border-primary pb-1" href="#">Beranda</a>
+<a class="font-subtitle-lg text-subtitle-lg text-on-surface-variant hover:text-primary transition-colors pb-1" href="#">Belajar</a>
+<a class="font-subtitle-lg text-subtitle-lg text-on-surface-variant hover:text-primary transition-colors pb-1" href="#">Forum</a>
+<a class="font-subtitle-lg text-subtitle-lg text-on-surface-variant hover:text-primary transition-colors pb-1" href="#">Profil</a>
+</nav>
+<button class="hover:opacity-80 transition-opacity active:scale-95 transition-transform duration-200">
+<span class="material-symbols-outlined text-primary text-[28px]">notifications</span>
+</button>
+</header>
+<main class="max-w-4xl mx-auto px-margin-mobile md:px-lg pt-md flex flex-col gap-lg">
+<!-- Welcome Area -->
+<section>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-surface">Halo, Bintang27!</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Mari lanjutkan perjalanan belajarmu hari ini.</p>
+</section>
+<!-- Main Card: Session Progress (Bento Style Main Item) -->
+<section class="bg-surface-container-lowest rounded-xl soft-shadow p-lg flex flex-col md:flex-row gap-lg items-center relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary-fixed opacity-20 rounded-bl-full -mr-8 -mt-8 pointer-events-none"></div>
+<div class="flex-1">
+<div class="inline-block bg-secondary-fixed text-on-secondary-fixed-variant font-label-md text-label-md px-sm py-1 rounded-full mb-xs">Sesi Minggu Ini</div>
+<h2 class="font-subtitle-lg text-subtitle-lg text-on-surface mb-2">Sesi 3 - Kenali Pikiranmu</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md">Pelajari bagaimana pikiran, perasaan, dan tindakan saling terhubung.</p>
+<button class="bg-primary text-on-primary font-subtitle-lg text-subtitle-lg px-lg py-sm rounded-lg hover:bg-surface-tint transition-colors active:scale-95 shadow-md flex items-center gap-2">
+                    Lanjutkan <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</div>
+<!-- Progress Ring -->
+<div class="relative w-24 h-24 flex-shrink-0 flex items-center justify-center">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-variant" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="4"></path>
+<path class="text-primary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="40, 100" stroke-linecap="round" stroke-width="4"></path>
+</svg>
+<span class="absolute font-subtitle-lg text-subtitle-lg text-primary">40%</span>
+</div>
+</section>
+<!-- Grid Layout for Secondary Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+<!-- Streak Row -->
+<section class="bg-surface-container-lowest rounded-xl soft-shadow p-md flex flex-col justify-center items-center gap-xs">
+<h3 class="font-subtitle-lg text-subtitle-lg text-on-surface mb-2">Streak 5 hari!</h3>
+<div class="flex gap-2 text-tertiary-container">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 text-center">Hebat! Pertahankan terus semangat belajarmu.</p>
+</section>
+<!-- Task Card -->
+<section class="bg-surface-container-lowest rounded-xl soft-shadow p-md flex items-center gap-md border border-outline-variant">
+<div class="w-12 h-12 rounded-full bg-error-container text-on-error-container flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined">assignment_late</span>
+</div>
+<div>
+<h3 class="font-subtitle-lg text-subtitle-lg text-on-surface">1 worksheet belum selesai</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Selesaikan tugas Sesi 2 sebelum lanjut.</p>
+<a class="font-label-md text-label-md text-primary mt-2 inline-block hover:underline" href="#">Kerjakan Sekarang</a>
+</div>
+</section>
+</div>
+<!-- Mood Journal Card -->
+<section class="bg-surface-container-lowest rounded-xl soft-shadow p-lg flex flex-col items-center">
+<h3 class="font-subtitle-lg text-subtitle-lg text-on-surface mb-md">Bagaimana perasaanmu hari ini?</h3>
+<div class="flex justify-between w-full max-w-sm px-2">
+<button class="w-12 h-12 rounded-full bg-surface-variant flex items-center justify-center hover:bg-primary-container hover:text-on-primary-container transition-colors active:scale-90 text-[28px]">
+                    😢
+                </button>
+<button class="w-12 h-12 rounded-full bg-surface-variant flex items-center justify-center hover:bg-primary-container hover:text-on-primary-container transition-colors active:scale-90 text-[28px]">
+                    😕
+                </button>
+<button class="w-12 h-12 rounded-full bg-surface-variant flex items-center justify-center hover:bg-primary-container hover:text-on-primary-container transition-colors active:scale-90 text-[28px]">
+                    😐
+                </button>
+<button class="w-12 h-12 rounded-full bg-surface-variant flex items-center justify-center hover:bg-primary-container hover:text-on-primary-container transition-colors active:scale-90 text-[28px]">
+                    🙂
+                </button>
+<button class="w-12 h-12 rounded-full bg-surface-variant flex items-center justify-center hover:bg-primary-container hover:text-on-primary-container transition-colors active:scale-90 text-[28px]">
+                    😁
+                </button>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-sm text-center">Jurnal membantumu mengenali emosi.</p>
+</section>
+<!-- Facilitator Announcement Card -->
+<section class="bg-surface-container-low rounded-xl p-md border-l-4 border-secondary-container mb-md">
+<div class="flex items-center gap-xs mb-xs">
+<span class="material-symbols-outlined text-secondary-container">campaign</span>
+<h4 class="font-subtitle-lg text-subtitle-lg text-on-surface">Pengumuman Fasilitator</h4>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Halo semuanya! Sesi tanya jawab live minggu ini akan diadakan pada hari Jumat jam 15:00. Jangan lupa siapkan pertanyaan kalian ya!</p>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center pt-2 pb-4 px-2 bg-surface-container-lowest dark:bg-inverse-surface shadow-[0px_-4px_20px_rgba(18,29,38,0.05)] rounded-t-xl z-50">
+<a class="flex flex-col items-center justify-center text-primary dark:text-primary-fixed-dim font-bold bg-primary-container/20 dark:bg-primary-container/40 rounded-full px-4 py-1 active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-label-md text-label-md">Beranda</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant hover:bg-surface-container-high dark:hover:bg-surface-variant transition-colors active:scale-90 duration-200 px-4 py-1 rounded-xl" href="#">
+<span class="material-symbols-outlined mb-1">menu_book</span>
+<span class="font-label-md text-label-md">Belajar</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant hover:bg-surface-container-high dark:hover:bg-surface-variant transition-colors active:scale-90 duration-200 px-4 py-1 rounded-xl" href="#">
+<span class="material-symbols-outlined mb-1">forum</span>
+<span class="font-label-md text-label-md">Forum</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant hover:bg-surface-container-high dark:hover:bg-surface-variant transition-colors active:scale-90 duration-200 px-4 py-1 rounded-xl" href="#">
+<span class="material-symbols-outlined mb-1">person</span>
+<span class="font-label-md text-label-md">Profil</span>
+</a>
+</nav>
+</body></html>

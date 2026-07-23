@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Saja - Evaluasi Sikap</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Theme Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed-variant": "#75340b",
+                    "on-error-container": "#93000a",
+                    "tertiary-fixed-dim": "#ffb691",
+                    "inverse-on-surface": "#e8f2ff",
+                    "secondary-container": "#316fe2",
+                    "primary-fixed": "#88f4f2",
+                    "surface": "#f7f9ff",
+                    "on-tertiary-fixed": "#341100",
+                    "inverse-surface": "#27313c",
+                    "primary-container": "#008281",
+                    "on-surface-variant": "#3d4949",
+                    "error": "#ba1a1a",
+                    "surface-container": "#e4effd",
+                    "surface-container-highest": "#d9e3f1",
+                    "on-primary-fixed": "#002020",
+                    "secondary-fixed": "#d9e2ff",
+                    "on-secondary-fixed-variant": "#00429c",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "background": "#f7f9ff",
+                    "outline": "#6d7979",
+                    "outline-variant": "#bcc9c8",
+                    "on-primary-container": "#f3fffe",
+                    "on-secondary-container": "#fefcff",
+                    "surface-tint": "#006a69",
+                    "tertiary-container": "#ae6035",
+                    "tertiary": "#8f481f",
+                    "primary": "#006766",
+                    "on-tertiary-container": "#fffbff",
+                    "on-error": "#ffffff",
+                    "inverse-primary": "#6bd7d6",
+                    "on-surface": "#121d26",
+                    "surface-container-high": "#dfe9f7",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-fixed": "#ffdbcb",
+                    "on-secondary-fixed": "#001945",
+                    "surface-bright": "#f7f9ff",
+                    "surface-variant": "#d9e3f1",
+                    "secondary": "#0055c7",
+                    "error-container": "#ffdad6",
+                    "primary-fixed-dim": "#6bd7d6",
+                    "on-primary": "#ffffff",
+                    "surface-dim": "#d1dbe8",
+                    "on-background": "#121d26",
+                    "on-primary-fixed-variant": "#00504f",
+                    "surface-container-low": "#edf4ff",
+                    "secondary-fixed-dim": "#b0c6ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "sm": "12px",
+                    "xs": "8px",
+                    "lg": "24px",
+                    "md": "16px",
+                    "xl": "32px",
+                    "gutter": "16px",
+                    "margin-mobile": "20px",
+                    "base": "4px"
+            },
+            "fontFamily": {
+                    "subtitle-lg": ["Plus Jakarta Sans", "sans-serif"],
+                    "label-md": ["Plus Jakarta Sans", "sans-serif"],
+                    "headline-md": ["Plus Jakarta Sans", "sans-serif"],
+                    "headline-lg": ["Plus Jakarta Sans", "sans-serif"],
+                    "body-md": ["Plus Jakarta Sans", "sans-serif"],
+                    "body-lg": ["Plus Jakarta Sans", "sans-serif"],
+                    "headline-lg-mobile": ["Plus Jakarta Sans", "sans-serif"]
+            },
+            "fontSize": {
+                    "subtitle-lg": ["18px", {"lineHeight": "26px", "fontWeight": "600"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "700"}],
+                    "headline-lg": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["22px", {"lineHeight": "28px", "fontWeight": "700"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap');
+        
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        /* Custom hide scrollbar but keep functionality */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md text-body-md min-h-screen flex flex-col antialiased relative">
+<!-- TopAppBar -->
+<header class="bg-surface w-full top-0 sticky flex justify-between items-center px-margin-mobile h-14 z-40">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full overflow-hidden bg-surface-variant flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="A friendly, stylized flat vector illustration of Saja, a cute, approachable teenage mascot character wearing a bright teal hoodie. The character has a warm, non-judgmental expression and soft facial features, designed in a modern, culturally sensitive Indonesian aesthetic suitable for middle schoolers. The background is a solid transparent or light grey circle." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnhcleZwyK5RZZJ4zK9ylQcq7bhKbP3fWKSTZXr_pIjDlU8Xl4ivCcJcovd4M9vPkm1OLTfk_KkHikyKfYvOWIMChvtiq3afpuAIa5S199pgvXu82PjsH8yQkjjR1M_jWITvcdLAah9bCgNS5mKC8BPc5kRcP3Q_kBhIS28R2zroL0wkzdryQhQVTSqrRqS-cAVJMXo2tF4yyO30B7jthVZFAJHwMbcdUm-kI1LFBIY-ixZNDinTGYWw"/>
+</div>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary tracking-tight">SAHAJA</h1>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:opacity-80 transition-opacity active:scale-95 text-on-surface-variant">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 flex flex-col px-margin-mobile py-lg max-w-md mx-auto w-full relative">
+<!-- Progress Section -->
+<div class="w-full mb-lg">
+<div class="flex justify-between items-end mb-xs">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Soal 28 dari 37</span>
+<span class="font-label-md text-label-md text-primary">75%</span>
+</div>
+<div class="w-full h-2 bg-surface-variant rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all duration-500 ease-out" style="width: 75%;"></div>
+</div>
+</div>
+<!-- Question Card -->
+<div class="bg-surface-container-lowest rounded-[24px] p-lg shadow-[0px_4px_20px_rgba(18,29,38,0.05)] mb-lg border border-outline-variant/20 relative overflow-hidden">
+<!-- Decorative soft background blob -->
+<div class="absolute -top-10 -right-10 w-32 h-32 bg-primary-fixed/20 rounded-full blur-3xl pointer-events-none"></div>
+<h2 class="font-headline-md text-headline-md text-on-surface text-center relative z-10 leading-snug">
+                "Aku mau mencari informasi kesehatan dari sumber yang terpercaya."
+            </h2>
+</div>
+<!-- Likert Scale Input -->
+<div class="flex flex-col gap-sm flex-1" id="likert-container">
+<button class="likert-option w-full min-h-[56px] rounded-xl border border-outline-variant bg-surface-container-lowest flex items-center px-md gap-md transition-all duration-200 active:scale-[0.98] focus:outline-none" data-value="1">
+<div class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center text-xl emoji-container transition-colors">😡</div>
+<span class="font-body-lg text-body-lg text-on-surface flex-1 text-left">Sangat Tidak Setuju</span>
+<div class="w-6 h-6 rounded-full border-2 border-outline-variant flex items-center justify-center radio-indicator transition-colors">
+<div class="w-3 h-3 rounded-full bg-primary scale-0 transition-transform duration-200 indicator-dot"></div>
+</div>
+</button>
+<button class="likert-option w-full min-h-[56px] rounded-xl border border-outline-variant bg-surface-container-lowest flex items-center px-md gap-md transition-all duration-200 active:scale-[0.98] focus:outline-none" data-value="2">
+<div class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center text-xl emoji-container transition-colors">🙁</div>
+<span class="font-body-lg text-body-lg text-on-surface flex-1 text-left">Tidak Setuju</span>
+<div class="w-6 h-6 rounded-full border-2 border-outline-variant flex items-center justify-center radio-indicator transition-colors">
+<div class="w-3 h-3 rounded-full bg-primary scale-0 transition-transform duration-200 indicator-dot"></div>
+</div>
+</button>
+<button class="likert-option w-full min-h-[56px] rounded-xl border border-outline-variant bg-surface-container-lowest flex items-center px-md gap-md transition-all duration-200 active:scale-[0.98] focus:outline-none" data-value="3">
+<div class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center text-xl emoji-container transition-colors">😐</div>
+<span class="font-body-lg text-body-lg text-on-surface flex-1 text-left">Netral</span>
+<div class="w-6 h-6 rounded-full border-2 border-outline-variant flex items-center justify-center radio-indicator transition-colors">
+<div class="w-3 h-3 rounded-full bg-primary scale-0 transition-transform duration-200 indicator-dot"></div>
+</div>
+</button>
+<button class="likert-option w-full min-h-[56px] rounded-xl border border-outline-variant bg-surface-container-lowest flex items-center px-md gap-md transition-all duration-200 active:scale-[0.98] focus:outline-none" data-value="4">
+<div class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center text-xl emoji-container transition-colors">🙂</div>
+<span class="font-body-lg text-body-lg text-on-surface flex-1 text-left">Setuju</span>
+<div class="w-6 h-6 rounded-full border-2 border-outline-variant flex items-center justify-center radio-indicator transition-colors">
+<div class="w-3 h-3 rounded-full bg-primary scale-0 transition-transform duration-200 indicator-dot"></div>
+</div>
+</button>
+<button class="likert-option w-full min-h-[56px] rounded-xl border border-outline-variant bg-surface-container-lowest flex items-center px-md gap-md transition-all duration-200 active:scale-[0.98] focus:outline-none" data-value="5">
+<div class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center text-xl emoji-container transition-colors">😍</div>
+<span class="font-body-lg text-body-lg text-on-surface flex-1 text-left">Sangat Setuju</span>
+<div class="w-6 h-6 rounded-full border-2 border-outline-variant flex items-center justify-center radio-indicator transition-colors">
+<div class="w-3 h-3 rounded-full bg-primary scale-0 transition-transform duration-200 indicator-dot"></div>
+</div>
+</button>
+</div>
+<!-- Sticky Bottom Action -->
+<div class="mt-xl pt-md bg-surface sticky bottom-0 pb-margin-mobile">
+<button class="w-full h-[56px] rounded-full bg-primary text-on-primary font-label-md text-label-md uppercase tracking-wider flex items-center justify-center gap-2 transition-all duration-300 disabled:opacity-50 disabled:bg-surface-variant disabled:text-on-surface-variant disabled:cursor-not-allowed shadow-[0px_8px_24px_rgba(0,103,102,0.15)] active:scale-95" disabled="" id="submit-btn">
+                Simpan Jawaban
+                <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</div>
+</main>
+<!-- Success Overlay -->
+<div class="fixed inset-0 z-50 bg-on-surface/40 backdrop-blur-sm hidden flex items-center justify-center px-margin-mobile transition-opacity duration-300 opacity-0" id="success-overlay">
+<div class="bg-surface-container-lowest rounded-[24px] p-xl w-full max-w-sm flex flex-col items-center text-center shadow-[0px_16px_40px_rgba(18,29,38,0.12)] transform scale-90 transition-all duration-300 opacity-0" id="success-card">
+<div class="w-24 h-24 mb-md relative">
+<!-- Decorative rings -->
+<div class="absolute inset-0 bg-primary-fixed rounded-full animate-ping opacity-20"></div>
+<div class="absolute inset-2 bg-primary-container rounded-full flex items-center justify-center z-10">
+<span class="material-symbols-outlined text-[48px] text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-xs">Selesai!</h3>
+<p class="font-body-md text-body-md text-on-surface mb-lg">Jawabanmu tersimpan dengan aman.</p>
+<div class="flex items-center gap-2 px-md py-xs bg-surface-variant rounded-full text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">cloud_done</span>
+                Offline saved
+            </div>
+<!-- Hidden button to reset for demo purposes -->
+<button class="mt-8 text-on-surface-variant underline font-body-md text-body-md" id="close-overlay">Tutup (Demo)</button>
+</div>
+</div>
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const options = document.querySelectorAll('.likert-option');
+            const submitBtn = document.getElementById('submit-btn');
+            const overlay = document.getElementById('success-overlay');
+            const successCard = document.getElementById('success-card');
+            const closeOverlayBtn = document.getElementById('close-overlay');
+            let selectedValue = null;
+
+            options.forEach(option => {
+                option.addEventListener('click', function() {
+                    // Reset all
+                    options.forEach(opt => {
+                        opt.classList.remove('border-primary', 'bg-primary-container/20');
+                        opt.classList.add('border-outline-variant', 'bg-surface-container-lowest');
+                        
+                        const dot = opt.querySelector('.indicator-dot');
+                        dot.classList.remove('scale-100');
+                        dot.classList.add('scale-0');
+                        
+                        const radio = opt.querySelector('.radio-indicator');
+                        radio.classList.remove('border-primary');
+                        radio.classList.add('border-outline-variant');
+                        
+                        const emojiBg = opt.querySelector('.emoji-container');
+                        emojiBg.classList.remove('bg-surface-container-lowest');
+                        emojiBg.classList.add('bg-surface-variant');
+                    });
+
+                    // Set active
+                    this.classList.remove('border-outline-variant', 'bg-surface-container-lowest');
+                    this.classList.add('border-primary', 'bg-primary-container/20');
+                    
+                    const dot = this.querySelector('.indicator-dot');
+                    dot.classList.remove('scale-0');
+                    dot.classList.add('scale-100');
+                    
+                    const radio = this.querySelector('.radio-indicator');
+                    radio.classList.remove('border-outline-variant');
+                    radio.classList.add('border-primary');
+                    
+                    const emojiBg = this.querySelector('.emoji-container');
+                    emojiBg.classList.remove('bg-surface-variant');
+                    emojiBg.classList.add('bg-surface-container-lowest');
+
+                    selectedValue = this.getAttribute('data-value');
+                    
+                    // Enable button
+                    submitBtn.removeAttribute('disabled');
+                    submitBtn.classList.remove('disabled:opacity-50', 'disabled:bg-surface-variant');
+                });
+            });
+
+            submitBtn.addEventListener('click', () => {
+                if(selectedValue) {
+                    // Show overlay
+                    overlay.classList.remove('hidden');
+                    // Small delay to allow display block to apply before animating opacity/transform
+                    setTimeout(() => {
+                        overlay.classList.remove('opacity-0');
+                        successCard.classList.remove('scale-90', 'opacity-0');
+                        successCard.classList.add('scale-100', 'opacity-100');
+                    }, 50);
+                }
+            });
+            
+            closeOverlayBtn.addEventListener('click', () => {
+                overlay.classList.add('opacity-0');
+                successCard.classList.remove('scale-100', 'opacity-100');
+                successCard.classList.add('scale-90', 'opacity-0');
+                
+                setTimeout(() => {
+                    overlay.classList.add('hidden');
+                }, 300);
+            });
+        });
+    </script>
+</body></html>

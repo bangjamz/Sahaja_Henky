@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Sahaja — Prototype Gallery</title>
+<style>
+  :root {
+    --bg: #f7f9ff;
+    --card: #ffffff;
+    --text: #121d26;
+    --muted: #3d4949;
+    --accent: #006766;
+    --border: #d9e3f1;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+  }
+  header {
+    padding: 40px 24px 24px;
+    text-align: center;
+  }
+  header h1 {
+    margin: 0 0 8px;
+    font-size: 28px;
+    color: var(--accent);
+  }
+  header p {
+    margin: 0;
+    color: var(--muted);
+  }
+  section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 16px 24px 48px;
+  }
+  section h2 {
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--muted);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 8px;
+    margin: 40px 0 16px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 16px;
+  }
+  a.card {
+    display: block;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    text-decoration: none;
+    color: var(--text);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  a.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  }
+  .thumb {
+    width: 100%;
+    aspect-ratio: 9/16;
+    object-fit: cover;
+    display: block;
+    background: var(--border);
+  }
+  .label {
+    padding: 10px 12px;
+    font-size: 13px;
+    font-weight: 600;
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Sahaja — Prototype Frontend</h1>
+  <p>Klik salah satu layar untuk membuka prototype interaktifnya.</p>
+</header>
+<section>
+
+  <h2>Onboarding</h2>
+  <div class="grid">
+    <a class="card" href="splash_walkthrough_1_v1/"><img class="thumb" src="splash_walkthrough_1_v1/screen.png"/><div class="label">Splash & Walkthrough 1 (v1)</div></a>
+    <a class="card" href="splash_walkthrough_1_v2/"><img class="thumb" src="splash_walkthrough_1_v2/screen.png"/><div class="label">Splash & Walkthrough 1 (v2)</div></a>
+    <a class="card" href="splash_walkthrough_2_v1/"><img class="thumb" src="splash_walkthrough_2_v1/screen.png"/><div class="label">Splash & Walkthrough 2 (v1)</div></a>
+    <a class="card" href="splash_walkthrough_2_v2/"><img class="thumb" src="splash_walkthrough_2_v2/screen.png"/><div class="label">Splash & Walkthrough 2 (v2)</div></a>
+    <a class="card" href="splash_walkthrough_final_v1/"><img class="thumb" src="splash_walkthrough_final_v1/screen.png"/><div class="label">Splash Final (v1)</div></a>
+    <a class="card" href="splash_walkthrough_final_v2/"><img class="thumb" src="splash_walkthrough_final_v2/screen.png"/><div class="label">Splash Final (v2)</div></a>
+  </div>
+
+  <h2>Persiapan & Aktivasi</h2>
+  <div class="grid">
+    <a class="card" href="intro_pretest/"><img class="thumb" src="intro_pretest/screen.png"/><div class="label">Intro Pretest</div></a>
+    <a class="card" href="persetujuan_siswa/"><img class="thumb" src="persetujuan_siswa/screen.png"/><div class="label">Persetujuan Siswa</div></a>
+    <a class="card" href="buat_nama_samaran/"><img class="thumb" src="buat_nama_samaran/screen.png"/><div class="label">Buat Nama Samaran</div></a>
+    <a class="card" href="masukkan_kode_aktivasi/"><img class="thumb" src="masukkan_kode_aktivasi/screen.png"/><div class="label">Masukkan Kode Aktivasi</div></a>
+    <a class="card" href="tur_singkat/"><img class="thumb" src="tur_singkat/screen.png"/><div class="label">Tur Singkat</div></a>
+  </div>
+
+  <h2>Beranda & Pembelajaran</h2>
+  <div class="grid">
+    <a class="card" href="beranda/"><img class="thumb" src="beranda/screen.png"/><div class="label">Beranda</div></a>
+    <a class="card" href="peta_belajar/"><img class="thumb" src="peta_belajar/screen.png"/><div class="label">Peta Belajar</div></a>
+    <a class="card" href="detail_sesi_3/"><img class="thumb" src="detail_sesi_3/screen.png"/><div class="label">Detail Sesi 3</div></a>
+    <a class="card" href="player_materi/"><img class="thumb" src="player_materi/screen.png"/><div class="label">Player Materi</div></a>
+  </div>
+
+  <h2>Kuis & Evaluasi</h2>
+  <div class="grid">
+    <a class="card" href="soal_sikap/"><img class="thumb" src="soal_sikap/screen.png"/><div class="label">Soal Sikap</div></a>
+    <a class="card" href="soal_pengetahuan/"><img class="thumb" src="soal_pengetahuan/screen.png"/><div class="label">Soal Pengetahuan</div></a>
+    <a class="card" href="kuis_sesi/"><img class="thumb" src="kuis_sesi/screen.png"/><div class="label">Kuis Sesi</div></a>
+    <a class="card" href="worksheet_cbt/"><img class="thumb" src="worksheet_cbt/screen.png"/><div class="label">Worksheet CBT</div></a>
+    <a class="card" href="posttest_penutup/"><img class="thumb" src="posttest_penutup/screen.png"/><div class="label">Posttest Penutup</div></a>
+    <a class="card" href="sertifikat/"><img class="thumb" src="sertifikat/screen.png"/><div class="label">Sertifikat</div></a>
+  </div>
+
+  <h2>Komunitas & Jurnal</h2>
+  <div class="grid">
+    <a class="card" href="jurnalku/"><img class="thumb" src="jurnalku/screen.png"/><div class="label">Jurnalku</div></a>
+    <a class="card" href="daftar_forum/"><img class="thumb" src="daftar_forum/screen.png"/><div class="label">Daftar Forum</div></a>
+    <a class="card" href="detail_thread/"><img class="thumb" src="detail_thread/screen.png"/><div class="label">Detail Thread</div></a>
+    <a class="card" href="tulis_post/"><img class="thumb" src="tulis_post/screen.png"/><div class="label">Tulis Post</div></a>
+  </div>
+
+  <h2>Lainnya</h2>
+  <div class="grid">
+    <a class="card" href="angket_kepuasan/"><img class="thumb" src="angket_kepuasan/screen.png"/><div class="label">Angket Kepuasan</div></a>
+    <a class="card" href="profil/"><img class="thumb" src="profil/screen.png"/><div class="label">Profil</div></a>
+  </div>
+
+</section>
+</body>
+</html>
