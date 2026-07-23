@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Posttest &amp; Final Screen - SAHAJA</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed-variant": "#75340b",
+                    "on-error-container": "#93000a",
+                    "tertiary-fixed-dim": "#ffb691",
+                    "inverse-on-surface": "#e8f2ff",
+                    "secondary-container": "#316fe2",
+                    "primary-fixed": "#88f4f2",
+                    "surface": "#f7f9ff",
+                    "on-tertiary-fixed": "#341100",
+                    "inverse-surface": "#27313c",
+                    "primary-container": "#008281",
+                    "on-surface-variant": "#3d4949",
+                    "error": "#ba1a1a",
+                    "surface-container": "#e4effd",
+                    "surface-container-highest": "#d9e3f1",
+                    "on-primary-fixed": "#002020",
+                    "secondary-fixed": "#d9e2ff",
+                    "on-secondary-fixed-variant": "#00429c",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "background": "#f7f9ff",
+                    "outline": "#6d7979",
+                    "outline-variant": "#bcc9c8",
+                    "on-primary-container": "#f3fffe",
+                    "on-secondary-container": "#fefcff",
+                    "surface-tint": "#006a69",
+                    "tertiary-container": "#ae6035",
+                    "tertiary": "#8f481f",
+                    "primary": "#006766",
+                    "on-tertiary-container": "#fffbff",
+                    "on-error": "#ffffff",
+                    "inverse-primary": "#6bd7d6",
+                    "on-surface": "#121d26",
+                    "surface-container-high": "#dfe9f7",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-fixed": "#ffdbcb",
+                    "on-secondary-fixed": "#001945",
+                    "surface-bright": "#f7f9ff",
+                    "surface-variant": "#d9e3f1",
+                    "secondary": "#0055c7",
+                    "error-container": "#ffdad6",
+                    "primary-fixed-dim": "#6bd7d6",
+                    "on-primary": "#ffffff",
+                    "surface-dim": "#d1dbe8",
+                    "on-background": "#121d26",
+                    "on-primary-fixed-variant": "#00504f",
+                    "surface-container-low": "#edf4ff",
+                    "secondary-fixed-dim": "#b0c6ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "sm": "12px",
+                    "xs": "8px",
+                    "lg": "24px",
+                    "md": "16px",
+                    "xl": "32px",
+                    "gutter": "16px",
+                    "margin-mobile": "20px",
+                    "base": "4px"
+            },
+            "fontFamily": {
+                    "subtitle-lg": [
+                            "Plus Jakarta Sans"
+                    ],
+                    "label-md": [
+                            "Plus Jakarta Sans"
+                    ],
+                    "headline-md": [
+                            "Plus Jakarta Sans"
+                    ],
+                    "headline-lg": [
+                            "Plus Jakarta Sans"
+                    ],
+                    "body-md": [
+                            "Plus Jakarta Sans"
+                    ],
+                    "body-lg": [
+                            "Plus Jakarta Sans"
+                    ],
+                    "headline-lg-mobile": [
+                            "Plus Jakarta Sans"
+                    ]
+            },
+            "fontSize": {
+                    "subtitle-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "26px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "label-md": [
+                            "12px",
+                            {
+                                    "lineHeight": "16px",
+                                    "letterSpacing": "0.05em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "headline-md": [
+                            "20px",
+                            {
+                                    "lineHeight": "28px",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "headline-lg": [
+                            "24px",
+                            {
+                                    "lineHeight": "32px",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "body-md": [
+                            "14px",
+                            {
+                                    "lineHeight": "20px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "body-lg": [
+                            "16px",
+                            {
+                                    "lineHeight": "24px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-lg-mobile": [
+                            "22px",
+                            {
+                                    "lineHeight": "28px",
+                                    "fontWeight": "700"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+<style>
+        body {
+            -webkit-tap-highlight-color: transparent;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+        .confetti-piece {
+            position: absolute;
+            width: 10px;
+            height: 20px;
+            background: #ffd300;
+            top: 0;
+            opacity: 0;
+            animation: fall 3s ease-in-out infinite;
+        }
+        @keyframes fall {
+            0% { top: -10%; transform: translateX(0) rotate(0deg); opacity: 1; }
+            100% { top: 110%; transform: translateX(100px) rotate(360deg); opacity: 0; }
+        }
+        .pulse-badge {
+            animation: pulse-soft 2s infinite;
+        }
+        @keyframes pulse-soft {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 103, 102, 0.4); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(0, 103, 102, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 103, 102, 0); }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col items-center justify-start pb-24 font-sans antialiased">
+<!-- Screen 1: Home Week 9 Prompt (This would typically be on a dashboard, presented here as part of the flow) -->
+<div class="w-full max-w-md px-margin-mobile pt-8 flex flex-col gap-lg hidden" id="home-view">
+<!-- TopAppBar (Simulated for context) -->
+<header class="w-full top-0 sticky flex justify-between items-center h-14 bg-surface text-primary z-10 mb-md">
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center overflow-hidden border-2 border-primary-container">
+<img class="w-full h-full object-cover" data-alt="A friendly teenage mascot character named Saja wearing a teal hoodie, smiling brightly. The art style is modern 2D vector illustration, flat colors, soft rounded edges, suitable for a health education app for middle schoolers in Indonesia. Light background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4L_9i8mPne9LQQUr79CehFsrIrnRXQwpndeCod1yz3HeLsGWVU8WiYIuWkEDCn4MHHTiEqvFgsCTTzAH_SO2Jzy-LdzSkigY_ziykWn0ddmn9b9BIR9B2mkQFivloA86Mb9_YMmelHIrhG8JuUf9hqp_MY3g4REOzVQ7PGuTkrkSZnbfIpKHP2TAYPs_5JtphVadKm1gTcIFtELEbWELM1EtsigFWekLQ7dqbpdHAY5hZqU8_UPy1Yg"/>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile font-bold tracking-tight text-primary">SAHAJA</h1>
+</div>
+<button class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">notifications</span>
+</button>
+</header>
+<section class="flex flex-col gap-sm">
+<h2 class="font-headline-md text-headline-md text-on-surface">Minggu 9: Selesai</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Langkah terakhir sebelum mendapatkan sertifikatmu.</p>
+</section>
+<!-- Bento Grid Card for Posttest -->
+<div class="glass-card rounded-xl p-lg flex flex-col gap-md shadow-[0px_8px_24px_rgba(18,29,38,0.08)] relative overflow-hidden group cursor-pointer transition-transform hover:scale-[1.02]" onclick="showFinalScreen()">
+<div class="absolute -right-6 -top-6 w-32 h-32 bg-primary-container/20 rounded-full blur-2xl group-hover:bg-primary-container/30 transition-colors"></div>
+<div class="flex items-start justify-between z-10">
+<div class="flex flex-col gap-xs">
+<div class="bg-primary-container/20 text-primary-fixed-variant px-3 py-1 rounded-full w-max">
+<span class="font-label-md text-label-md">Tugas Akhir</span>
+</div>
+<h3 class="font-subtitle-lg text-subtitle-lg text-on-surface mt-2">Isi kuesioner penutup</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Bantu kami menjadi lebih baik dengan mengisi evaluasi singkat ini.</p>
+</div>
+<div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-on-primary shadow-md shrink-0">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">assignment_turned_in</span>
+</div>
+</div>
+<div class="w-full h-2 bg-surface-variant rounded-full mt-sm z-10">
+<div class="w-0 h-full bg-primary rounded-full group-hover:w-full transition-all duration-1000 ease-in-out"></div>
+</div>
+<div class="flex justify-between items-center mt-1 z-10">
+<span class="font-label-md text-label-md text-on-surface-variant">Estimasi 5 menit</span>
+<span class="font-label-md text-label-md text-primary font-bold">Mulai sekarang →</span>
+</div>
+</div>
+</div>
+<!-- Screen 2: Final Success Screen (Main Focus) -->
+<div class="w-full max-w-md h-screen px-margin-mobile flex flex-col items-center justify-center relative overflow-hidden" id="success-view">
+<!-- Confetti Animation Container -->
+<div class="absolute inset-0 pointer-events-none z-0" id="confetti-container"></div>
+<!-- Central Illustration / Mascot -->
+<div class="z-10 flex flex-col items-center justify-center gap-lg w-full">
+<div class="relative w-64 h-64 flex items-center justify-center pulse-badge">
+<!-- Glowing background effect -->
+<div class="absolute inset-0 bg-primary-fixed/30 rounded-full blur-3xl"></div>
+<!-- Mascot Image -->
+<div class="w-48 h-48 rounded-full bg-surface shadow-[0px_8px_32px_rgba(0,103,102,0.15)] overflow-hidden border-4 border-surface z-10 flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="The mascot Saja, a friendly Indonesian teenager in a teal hoodie, jumping joyfully with arms raised in celebration, surrounded by small abstract sparkles. Modern flat vector illustration, bright and optimistic mood, light surface background, suitable for a middle school health app." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYBqDZ3V-yXaKedHUFO1XUmSXYQbY3bprX5wgBydA2lvmkMz7iJtFGShHfwPUajm2tZtq8Qsr006gbQNbv5vg-8zMTbz1XitxfY_j3oDUPXDHmR3_g_tWlFak_rLf4wyc1-5dgnjc3R9rbJB0xdSWX_9W9Cw_Nv9IxnHE16uP6ky6rXbyaGbCk3l_glzGM4326lvLgPxthk7Zlefz3fEeazSCt-1xtdXex0PKv6jc4Hm95-nOblBIbpw"/>
+</div>
+<!-- Floating Badges/Stars -->
+<div class="absolute top-4 right-8 w-12 h-12 bg-secondary-container text-on-secondary-container rounded-full flex items-center justify-center shadow-lg rotate-12 z-20">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<div class="absolute bottom-8 left-4 w-10 h-10 bg-tertiary-container text-on-tertiary-container rounded-full flex items-center justify-center shadow-lg -rotate-12 z-20">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+</div>
+</div>
+<!-- Typography -->
+<div class="text-center flex flex-col gap-sm mt-md z-10 w-full">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-extrabold px-4">Kamu hebat sudah menyelesaikan semuanya!</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant px-8 mt-2">Perjalanan belajarmu bersama SAHAJA luar biasa. Terus terapkan pengetahuan ini ya!</p>
+</div>
+<!-- Action Area -->
+<div class="w-full flex flex-col gap-md mt-xl z-10">
+<button class="w-full bg-primary hover:bg-primary/90 text-on-primary font-subtitle-lg text-subtitle-lg py-4 rounded-xl shadow-[0px_8px_24px_rgba(0,103,102,0.2)] transition-transform active:scale-95 flex items-center justify-center gap-xs">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">school</span>
+                    Lihat Sertifikat
+                </button>
+<button class="w-full bg-transparent border-2 border-outline-variant hover:bg-surface-variant text-on-surface-variant font-subtitle-lg text-subtitle-lg py-4 rounded-xl transition-colors flex items-center justify-center" onclick="showHome()">
+                    Kembali ke Beranda
+                </button>
+</div>
+</div>
+</div>
+<script>
+        // Simple script to toggle views and generate confetti
+        
+        function createConfetti() {
+            const container = document.getElementById('confetti-container');
+            const colors = ['#006766', '#316fe2', '#ae6035', '#ffdbcb', '#88f4f2'];
+            
+            for (let i = 0; i < 50; i++) {
+                const confetti = document.createElement('div');
+                confetti.classList.add('confetti-piece');
+                
+                // Randomize properties
+                confetti.style.left = Math.random() * 100 + 'vw';
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.animationDelay = Math.random() * 3 + 's';
+                confetti.style.animationDuration = Math.random() * 2 + 2 + 's';
+                
+                container.appendChild(confetti);
+            }
+        }
+
+        function showFinalScreen() {
+            document.getElementById('home-view').classList.add('hidden');
+            document.getElementById('success-view').classList.remove('hidden');
+            createConfetti();
+        }
+
+        function showHome() {
+            document.getElementById('success-view').classList.add('hidden');
+            document.getElementById('home-view').classList.remove('hidden');
+            
+            // Clear confetti
+            const container = document.getElementById('confetti-container');
+            while (container.firstChild) {
+                container.removeChild(container.firstChild);
+            }
+        }
+
+        // Initialize with Final Screen for demonstration based on prompt focus
+        // In a real app, logic would determine which to show first
+        createConfetti();
+    </script>
+</body></html>
