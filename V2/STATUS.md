@@ -18,8 +18,8 @@ Diperbarui: 12 November 2026, oleh Claude Code (Claude Opus 5.5), sesi bersama P
 ## Keadaan repo
 
 - Repo GitHub: `bangjamz/Sahaja_Henky`, cabang utama `main`.
-- PR terakhir yang digabung ke `main`: lihat riwayat git. Per 12 November 2026: PR #1 (V2 dan pemindahan draft lama ke `Old/`), PR #2 (penyelarasan label versi), dan PR berisi protokol serah terima.
-- Cabang terbuka: tidak ada.
+- PR yang digabung ke `main` per 12 November 2026: #1 (V2 dan pemindahan draft lama ke `Old/`), #2 (penyelarasan label versi). PR #3 (protokol serah terima) menunggu digabung. Untuk keadaan terbaru, periksa riwayat git.
+- Cabang terbuka: `chore/protokol-serah-terima` (PR #3), dihapus setelah digabung.
 - Galeri prototipe GitHub Pages disajikan dari `docs/` dan diperiksa tampil pada 12 November 2026.
 
 ## Sedang dikerjakan
