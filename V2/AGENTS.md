@@ -122,4 +122,21 @@ Peninjau melaporkan temuan dengan tiga tingkat: **Wajib diperbaiki**, **Sebaikny
 
 ## 10. Serah terima antaralat
 
-Karena proyek dikerjakan bergantian oleh beberapa alat, `STATUS.md` adalah ingatan bersama. Setiap sesi kerja diakhiri dengan memperbarui: tugas yang selesai, tugas yang sedang berjalan beserta cabangnya, hal yang menunggu keputusan, dan langkah berikutnya. Tulis fakta, bukan niat. Bila sesuatu belum diuji, katakan belum diuji.
+Karena proyek dikerjakan bergantian oleh beberapa alat, `STATUS.md` adalah ingatan bersama dan satu-satunya catatan status yang mengikat. Cermin di Google Drive dan catatan Obsidian bukan sumber status.
+
+Setiap sesi dibuka dan ditutup mengikuti `agen/serah-terima.md`. Ringkasnya:
+- **Membuka**: baca `AGENTS.md`, `STATUS.md`, dan dokumen 12; periksa keadaan git; jangan mengambil paket yang tercatat sedang dikerjakan alat lain.
+- **Bekerja**: di cabang `fitur/...` atau `chore/...`, digabung ke `main` lewat pull request, tidak langsung ke `main`.
+- **Menutup**: perbarui `STATUS.md` (keadaan saat ini, keadaan repo, sedang dikerjakan, menunggu keputusan, langkah berikutnya, satu baris riwayat dengan nama alat), walaupun pekerjaan belum selesai.
+
+Tulis fakta, bukan niat. Bila sesuatu belum diuji, katakan belum diuji.
+
+Berkas yang dibaca otomatis oleh tiap alat semuanya menunjuk ke berkas ini:
+
+| Alat | Berkas pintu masuk |
+|---|---|
+| Codex, Cursor, dan alat yang mengenali `AGENTS.md` | `AGENTS.md` |
+| Claude Code | `CLAUDE.md`, perintah di `.claude/` |
+| Antigravity dan Gemini | `GEMINI.md`, `.agent/rules/sahaja.md` |
+
+Bila alat baru dipakai dan tidak membaca berkas mana pun di atas, buka dengan perintah pembuka di `agen/serah-terima.md` bagian 6.
