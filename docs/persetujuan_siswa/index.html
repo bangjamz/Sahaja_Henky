@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SAHAJA - Persetujuan Siswa</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#75340b",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed-dim": "#ffb691",
+                        "inverse-on-surface": "#e8f2ff",
+                        "secondary-container": "#316fe2",
+                        "primary-fixed": "#88f4f2",
+                        "surface": "#f7f9ff",
+                        "on-tertiary-fixed": "#341100",
+                        "inverse-surface": "#27313c",
+                        "primary-container": "#008281",
+                        "on-surface-variant": "#3d4949",
+                        "error": "#ba1a1a",
+                        "surface-container": "#e4effd",
+                        "surface-container-highest": "#d9e3f1",
+                        "on-primary-fixed": "#002020",
+                        "secondary-fixed": "#d9e2ff",
+                        "on-secondary-fixed-variant": "#00429c",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "background": "#f7f9ff",
+                        "outline": "#6d7979",
+                        "outline-variant": "#bcc9c8",
+                        "on-primary-container": "#f3fffe",
+                        "on-secondary-container": "#fefcff",
+                        "surface-tint": "#006a69",
+                        "tertiary-container": "#ae6035",
+                        "tertiary": "#8f481f",
+                        "primary": "#006766",
+                        "on-tertiary-container": "#fffbff",
+                        "on-error": "#ffffff",
+                        "inverse-primary": "#6bd7d6",
+                        "on-surface": "#121d26",
+                        "surface-container-high": "#dfe9f7",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed": "#ffdbcb",
+                        "on-secondary-fixed": "#001945",
+                        "surface-bright": "#f7f9ff",
+                        "surface-variant": "#d9e3f1",
+                        "secondary": "#0055c7",
+                        "error-container": "#ffdad6",
+                        "primary-fixed-dim": "#6bd7d6",
+                        "on-primary": "#ffffff",
+                        "surface-dim": "#d1dbe8",
+                        "on-background": "#121d26",
+                        "on-primary-fixed-variant": "#00504f",
+                        "surface-container-low": "#edf4ff",
+                        "secondary-fixed-dim": "#b0c6ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px",
+                        "2xl": "1rem",
+                        "3xl": "1.5rem"
+                    },
+                    "spacing": {
+                        "sm": "12px",
+                        "xs": "8px",
+                        "lg": "24px",
+                        "md": "16px",
+                        "xl": "32px",
+                        "gutter": "16px",
+                        "margin-mobile": "20px",
+                        "base": "4px"
+                    },
+                    "fontFamily": {
+                        "subtitle-lg": ["Plus Jakarta Sans"],
+                        "label-md": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "headline-lg-mobile": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "subtitle-lg": ["18px", { "lineHeight": "26px", "fontWeight": "600" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "700" }],
+                        "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["22px", { "lineHeight": "28px", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background-color: #d9e3f1; border-radius: 20px; }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md antialiased md:items-center md:justify-center md:p-8">
+<!-- Top App Bar (Transactional - Suppressed/Simplified) -->
+<header class="w-full top-0 sticky bg-surface flex justify-between items-center px-margin-mobile h-14 md:hidden z-50">
+<button aria-label="Kembali" class="text-on-surface hover:opacity-80 transition-opacity active:scale-95 transition-transform duration-200 w-10 h-10 flex items-center justify-center rounded-full">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-primary">SAHAJA</span>
+<div class="w-10"></div> <!-- Spacer for centering -->
+</header>
+<!-- Main Canvas -->
+<main class="flex-1 flex flex-col w-full max-w-[480px] md:bg-surface-container-lowest md:rounded-3xl md:shadow-[0px_8px_24px_rgba(18,29,38,0.08)] md:overflow-hidden md:h-[800px] relative">
+<!-- Desktop Header Replacement -->
+<div class="hidden md:flex flex-col items-center pt-8 pb-4">
+<span class="font-headline-lg text-headline-lg text-primary">SAHAJA</span>
+</div>
+<div class="flex-1 overflow-y-auto custom-scrollbar px-margin-mobile pt-4 pb-32">
+<div class="text-center mb-8">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-surface mb-2">Persetujuan Siswa</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Halo! Mari kita lihat apa saja yang akan kamu pelajari dan lakukan bersama Saja.</p>
+</div>
+<!-- Bento Grid / Cards Layout -->
+<div class="grid grid-cols-1 gap-md mb-8">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest rounded-2xl p-md shadow-[0px_4px_20px_rgba(18,29,38,0.05)] border border-outline-variant/30 flex gap-md items-start">
+<div class="w-16 h-16 rounded-xl bg-primary-container/10 flex items-center justify-center shrink-0">
+<img class="w-12 h-12 object-contain rounded-lg" data-alt="A friendly, modern, flat vector illustration of a teenage mascot named Saja in a teal hoodie waving hello. The style is soft, welcoming, and suitable for a middle school educational app. Clean lines, light background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzcGQjgi6wu-L2NrioMhEvJCDTLCqXjhiqNjhYrc02GacLY1PzJd2Pgm77YhlGFOO6jnKPBeZbwh5HhUj8gvJE9G362GzyH_mUO_dY8fRscI3GHP-D9MFoHKzPNkYlanWQxaWtbdI1x97VdYtexiHRgP75hRMwGK2jiFqaiIYPnAbD_FLRYoapAN62CH6uulCvCejy0xLd8fTZQcmIOz24B3EXrGtWZ07gTeWgA0Sbhgw2l1JSftXg2A"/>
+</div>
+<div>
+<h3 class="font-subtitle-lg text-subtitle-lg text-on-surface mb-1">Apa itu SAHAJA?</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Aplikasi ramah untuk belajar tentang kesehatan diri, pubertas, dan kesejahteraan remajamu bersama teman-teman.</p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest rounded-2xl p-md shadow-[0px_4px_20px_rgba(18,29,38,0.05)] border border-outline-variant/30 flex gap-md items-start">
+<div class="w-16 h-16 rounded-xl bg-secondary-container/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary text-[32px]">calendar_month</span>
+</div>
+<div>
+<h3 class="font-subtitle-lg text-subtitle-lg text-on-surface mb-1">Apa yang kamu lakukan 8 minggu</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Menyelesaikan misi belajar mingguan yang seru, membaca artikel, dan berdiskusi di forum aman.</p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest rounded-2xl p-md shadow-[0px_4px_20px_rgba(18,29,38,0.05)] border border-outline-variant/30 flex gap-md items-start">
+<div class="w-16 h-16 rounded-xl bg-tertiary-container/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-tertiary-container text-[32px]">shield_person</span>
+</div>
+<div>
+<h3 class="font-subtitle-lg text-subtitle-lg text-on-surface mb-1">Datamu aman &amp; pakai nama samaran</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Kamu akan menggunakan username yang kamu pilih sendiri. Privasi kamu adalah prioritas Saja.</p>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest rounded-2xl p-md shadow-[0px_4px_20px_rgba(18,29,38,0.05)] border border-outline-variant/30 flex gap-md items-start">
+<div class="w-16 h-16 rounded-xl bg-error-container/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-error text-[32px]">front_hand</span>
+</div>
+<div>
+<h3 class="font-subtitle-lg text-subtitle-lg text-on-surface mb-1">Kamu boleh berhenti kapan saja</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Tidak ada paksaan. Jika kamu merasa tidak nyaman, kamu bisa keluar dari program ini kapan pun.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Sticky Bottom Action Area -->
+<div class="absolute bottom-0 left-0 w-full bg-surface-container-lowest pt-4 pb-6 px-margin-mobile shadow-[0px_-8px_24px_rgba(18,29,38,0.05)] z-10">
+<label class="flex items-start gap-3 mb-4 cursor-pointer group">
+<div class="relative flex items-center justify-center mt-1">
+<input class="peer appearance-none w-6 h-6 border-2 border-outline rounded text-primary focus:ring-primary focus:ring-2 focus:ring-offset-2 focus:ring-offset-surface bg-surface-container-lowest transition-all checked:bg-primary checked:border-primary" id="assent-checkbox" type="checkbox"/>
+<span class="material-symbols-outlined text-on-primary absolute text-[18px] opacity-0 peer-checked:opacity-100 pointer-events-none transition-opacity">check</span>
+</div>
+<div class="flex-1">
+<span class="font-subtitle-lg text-subtitle-lg text-on-surface block mb-1 group-hover:text-primary transition-colors">Aku mengerti dan mau ikut</span>
+<span class="font-body-md text-body-md text-on-surface-variant text-[12px] flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">verified_user</span>
+                        Orang tua/walimu sudah memberikan izin.
+                    </span>
+</div>
+</label>
+<button class="w-full h-[56px] rounded-full font-subtitle-lg text-subtitle-lg flex items-center justify-center transition-all duration-300 disabled:bg-surface-variant disabled:text-on-surface-variant/50 bg-primary text-on-primary hover:opacity-90 active:scale-95 shadow-[0px_4px_20px_rgba(0,103,102,0.2)] disabled:shadow-none" disabled="" id="submit-btn">
+                Setuju dan Lanjut
+            </button>
+</div>
+</main>
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const checkbox = document.getElementById('assent-checkbox');
+            const submitBtn = document.getElementById('submit-btn');
+
+            checkbox.addEventListener('change', (e) => {
+                submitBtn.disabled = !e.target.checked;
+            });
+        });
+    </script>
+
+<div id="__proto_nav" style="position:fixed;left:0;right:0;bottom:0;z-index:999999;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 14px;background:rgba(18,29,38,0.92);backdrop-filter:blur(6px);font-family:'Plus Jakarta Sans',-apple-system,sans-serif;">
+  <a href="../masukkan_kode_aktivasi/" style="flex:1;text-align:left;color:#fff;text-decoration:none;font-size:13px;font-weight:600;padding:8px 12px;border-radius:20px;background:rgba(255,255,255,0.12);">&larr; Kode Aktivasi</a>
+  <a href="../index.html" title="Kembali ke Peta Prototype" style="color:#fff;text-decoration:none;font-size:18px;padding:8px 10px;border-radius:20px;background:rgba(255,255,255,0.12);">&#8962;</a>
+  <a href="../buat_nama_samaran/" style="flex:1;text-align:right;color:#fff;text-decoration:none;font-size:13px;font-weight:600;padding:8px 12px;border-radius:20px;background:#006766;">Nama Samaran &rarr;</a>
+</div>
+<div style="height:56px;"></div>
+</body></html>

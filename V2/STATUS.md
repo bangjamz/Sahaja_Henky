@@ -11,6 +11,7 @@ Diperbarui: 12 November 2026, oleh Claude (sesi perancangan bersama Pak Indra).
 - Berkas alat pengembang AI dibuat: `AGENTS.md`, `CLAUDE.md`, `agen/` (5 peran) dan `agen/claude-code/` (subagen dan perintah Claude Code).
 - Subagen dan perintah Claude Code terpasang di `V2/.claude/` (12 November 2026): 5 subagen dan perintah `/mulai`, `/tinjau`, `/checkpoint`. Belum diuji dari sesi Claude Code yang dibuka di folder `V2`.
 - 12 November 2026: backend diganti dari Supabase ke Laravel dan PostgreSQL dalam Docker Compose di VPS Hostinger KVM 4 milik Pak Indra (T10). Berkas 13 Server dan Operasional ditambahkan. VPS dipakai bersama aplikasi lain.
+- Galeri prototipe GitHub Pages tetap disajikan dari `docs/` di akar repo, salinan identik dari `Old/docs/`. Bila galeri diperbarui, ubah `docs/`, bukan `Old/docs/`.
 - Salinan `Rencana Apps` di Google Drive dicerminkan ke versi 2.2 (14 berkas). Bila dokumen di V2 berubah, cermin perlu disalin ulang.
 
 ## Sedang dikerjakan

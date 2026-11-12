@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SAHAJA - CBT Worksheet 'Catat Pikiranmu'</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#75340b",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed-dim": "#ffb691",
+                        "inverse-on-surface": "#e8f2ff",
+                        "secondary-container": "#316fe2",
+                        "primary-fixed": "#88f4f2",
+                        "surface": "#f7f9ff",
+                        "on-tertiary-fixed": "#341100",
+                        "inverse-surface": "#27313c",
+                        "primary-container": "#008281",
+                        "on-surface-variant": "#3d4949",
+                        "error": "#ba1a1a",
+                        "surface-container": "#e4effd",
+                        "surface-container-highest": "#d9e3f1",
+                        "on-primary-fixed": "#002020",
+                        "secondary-fixed": "#d9e2ff",
+                        "on-secondary-fixed-variant": "#00429c",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "background": "#f7f9ff",
+                        "outline": "#6d7979",
+                        "outline-variant": "#bcc9c8",
+                        "on-primary-container": "#f3fffe",
+                        "on-secondary-container": "#fefcff",
+                        "surface-tint": "#006a69",
+                        "tertiary-container": "#ae6035",
+                        "tertiary": "#8f481f",
+                        "primary": "#006766",
+                        "on-tertiary-container": "#fffbff",
+                        "on-error": "#ffffff",
+                        "inverse-primary": "#6bd7d6",
+                        "on-surface": "#121d26",
+                        "surface-container-high": "#dfe9f7",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed": "#ffdbcb",
+                        "on-secondary-fixed": "#001945",
+                        "surface-bright": "#f7f9ff",
+                        "surface-variant": "#d9e3f1",
+                        "secondary": "#0055c7",
+                        "error-container": "#ffdad6",
+                        "primary-fixed-dim": "#6bd7d6",
+                        "on-primary": "#ffffff",
+                        "surface-dim": "#d1dbe8",
+                        "on-background": "#121d26",
+                        "on-primary-fixed-variant": "#00504f",
+                        "surface-container-low": "#edf4ff",
+                        "secondary-fixed-dim": "#b0c6ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "sm": "12px",
+                        "xs": "8px",
+                        "lg": "24px",
+                        "md": "16px",
+                        "xl": "32px",
+                        "gutter": "16px",
+                        "margin-mobile": "20px",
+                        "base": "4px"
+                    },
+                    "fontFamily": {
+                        "subtitle-lg": ["Plus Jakarta Sans"],
+                        "label-md": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "headline-lg-mobile": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "subtitle-lg": ["18px", { "lineHeight": "26px", "fontWeight": "600" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "700" }],
+                        "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["22px", { "lineHeight": "28px", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col md:hidden selection:bg-primary-container selection:text-on-primary-container">
+<!-- Header (No TopAppBar as this is a focused task) -->
+<header class="sticky top-0 z-40 bg-surface/90 backdrop-blur-md pb-4 pt-6 px-margin-mobile flex items-center justify-between shadow-[0px_4px_20px_rgba(18,29,38,0.03)]">
+<div class="flex items-center gap-xs">
+<button class="w-12 h-12 flex items-center justify-center rounded-full hover:bg-surface-variant transition-colors active:scale-95 text-on-surface">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Catat Pikiranmu</h1>
+</div>
+<button class="text-primary hover:opacity-80 transition-opacity p-2">
+<span class="material-symbols-outlined" data-icon="help" data-weight="fill" style="font-variation-settings: 'FILL' 1;">help</span>
+</button>
+</header>
+<main class="flex-1 px-margin-mobile py-lg flex flex-col gap-xl overflow-y-auto no-scrollbar pb-32">
+<!-- Intro Message -->
+<div class="flex gap-sm items-start">
+<img class="w-12 h-12 rounded-full object-cover shadow-[0px_4px_20px_rgba(18,29,38,0.05)] border-2 border-surface-container-lowest shrink-0" data-alt="A friendly, approachable teenage mascot character named 'Saja' wearing a teal hoodie, illustrated in a modern flat design style. The mascot is smiling warmly and looking directly at the viewer, acting as a supportive guide. The background is isolated or transparent, emphasizing a soft, non-judgmental, and welcoming mood suitable for middle schoolers." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKt_yetQtvYfI01-L9MPtbRpRltGhdP0fLAGvQ5iyI_2YSK98tQw_NodlRQ0MIV_syLxRaWRFy6xf4e8fw1JO6dHRDGn3728PaCiFvNhVVsk6w0CpyNJdwIrPQH89ddk4zKJRSHw_UysLRgKdfSaGeycL368MqLp2l7BcHOHS6-ZqEIBEkfIDC54F32frzlMQOsL9Y_iOSEPHBbuzuvqIF-ZHxBOnLouAuCIZANKhFB1kq-Qri1PlMzw"/>
+<div class="bg-surface-container-lowest rounded-2xl rounded-tl-none p-4 shadow-[0px_4px_20px_rgba(18,29,38,0.05)]">
+<p class="font-body-md text-body-md text-on-surface">Halo! Ini Saja. Kita coba urai pikiran yang bikin kamu nggak nyaman, yuk. Nggak usah buru-buru, pelan-pelan aja.</p>
+</div>
+</div>
+<!-- Step 1: Situation -->
+<div class="flex flex-col gap-xs">
+<div class="flex gap-sm items-start">
+<img class="w-12 h-12 rounded-full object-cover shadow-[0px_4px_20px_rgba(18,29,38,0.05)] border-2 border-surface-container-lowest shrink-0" data-alt="A friendly, approachable teenage mascot character named 'Saja' wearing a teal hoodie, illustrated in a modern flat design style. The mascot has a gentle, listening expression. The background is isolated or transparent, emphasizing a soft, non-judgmental, and welcoming mood suitable for middle schoolers." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0s8AYXWPCUwsgr5ZvmW_fDMspynawfPw62DAoU3ukukcidQke7gVjR5KQE9cTg7f_I0GiwPdobkOnK77dbLfEqmieLAt4Lni0VBxIRIeUteEWgkbXwtHB6BrGIzn7cFOWHL_a3SLpldMp2wz2Wgqm02Gmyac6iUm5Lxx2_H7jCuTXoYshLqhN146txtYhyA7beCOvo3EOdz_T7yFMJtZX9K-X7TvzHPBBhZaKaSH_BDyGl3IWWbIwsA"/>
+<div class="bg-surface-container-lowest rounded-2xl rounded-tl-none p-4 shadow-[0px_4px_20px_rgba(18,29,38,0.05)]">
+<p class="font-subtitle-lg text-subtitle-lg text-on-surface mb-1">Ceritakan situasinya</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Apa yang baru saja terjadi atau sedang kamu hadapi?</p>
+</div>
+</div>
+<div class="pl-14">
+<textarea class="w-full h-32 rounded-xl border border-outline-variant bg-surface-container-lowest p-md font-body-md text-body-md text-on-surface placeholder:text-outline focus:border-primary focus:ring-1 focus:ring-primary transition-colors shadow-[0px_4px_20px_rgba(18,29,38,0.02)] resize-none" placeholder="Contoh: Teman-teman ngobrol asyik tapi aku merasa dikacangin..."></textarea>
+</div>
+</div>
+<!-- Step 2: Thoughts -->
+<div class="flex flex-col gap-xs">
+<div class="flex gap-sm items-start">
+<img class="w-12 h-12 rounded-full object-cover shadow-[0px_4px_20px_rgba(18,29,38,0.05)] border-2 border-surface-container-lowest shrink-0" data-alt="A friendly, approachable teenage mascot character named 'Saja' wearing a teal hoodie, illustrated in a modern flat design style. The mascot looks curious and encouraging. The background is isolated or transparent, emphasizing a soft, non-judgmental, and welcoming mood suitable for middle schoolers." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGSlk63hlqzxos8mt6nNgXGxpnjwopRnn95EKZrLC3Frm9o76BQFtKU1F9_57VUr-B05CO5rh2obLCjKEbD_L6MkSON7LsrCFP1WbUOUlHGi7hw-tRNguXg5GOruk9e1UYFBXfPGvH3-IfoLr0c2ztk1UJP7xBO9BfB2XywpbRf9mcsOOFJhcKsEB-RT1VV6pDUbT8eye7rNaSIZjjsnX18u6EQfx3cVOWy3CUHkAPaVhJlOM6Hh56dg"/>
+<div class="bg-surface-container-lowest rounded-2xl rounded-tl-none p-4 shadow-[0px_4px_20px_rgba(18,29,38,0.05)]">
+<p class="font-subtitle-lg text-subtitle-lg text-on-surface mb-1">Apa yang terlintas di pikiranmu?</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Tuliskan pikiran otomatis yang muncul. Kalau bingung, coba pilih contoh di bawah.</p>
+</div>
+</div>
+<div class="pl-14 flex flex-col gap-sm">
+<textarea class="w-full h-32 rounded-xl border border-outline-variant bg-surface-container-lowest p-md font-body-md text-body-md text-on-surface placeholder:text-outline focus:border-primary focus:ring-1 focus:ring-primary transition-colors shadow-[0px_4px_20px_rgba(18,29,38,0.02)] resize-none" placeholder="Contoh: Kayaknya mereka nggak suka sama aku..."></textarea>
+<div class="flex flex-wrap gap-2">
+<button class="bg-surface-variant text-on-surface-variant font-label-md text-label-md px-3 py-1.5 rounded-full border border-transparent hover:border-primary transition-colors">"Aku pasti gagal"</button>
+<button class="bg-surface-variant text-on-surface-variant font-label-md text-label-md px-3 py-1.5 rounded-full border border-transparent hover:border-primary transition-colors">"Semua ini salahku"</button>
+<button class="bg-surface-variant text-on-surface-variant font-label-md text-label-md px-3 py-1.5 rounded-full border border-transparent hover:border-primary transition-colors">"Nggak ada yang peduli"</button>
+</div>
+</div>
+</div>
+<!-- Step 3: Reframing -->
+<div class="flex flex-col gap-xs">
+<div class="flex gap-sm items-start">
+<img class="w-12 h-12 rounded-full object-cover shadow-[0px_4px_20px_rgba(18,29,38,0.05)] border-2 border-surface-container-lowest shrink-0" data-alt="A friendly, approachable teenage mascot character named 'Saja' wearing a teal hoodie, illustrated in a modern flat design style. The mascot looks supportive and wise, holding a magnifying glass or lightbulb. The background is isolated or transparent, emphasizing a soft, non-judgmental, and welcoming mood suitable for middle schoolers." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCillZX1jPyIPLbv09mVMj0QOZ6pH_QhYOCwYdcuv4dQLYMeeGYgykt8Sj14gMB3iH3UrYWoyDdb54E5TbdIvGnoTc4YVdZPc16ldjA2F5j5Uc-5zMK70P48AhG1mBpJzY2-8Ti_qNhbvScPbCzrDbTZlTf5xVhCgBD8R4Yt0pXyBrjw9fURNlAh-2KKYngipned9u8ToyaoI9xVETdeG1-76_TtaXhVkeWiAPVRSY5ByKOej54hM9kdg"/>
+<div class="bg-surface-container-lowest rounded-2xl rounded-tl-none p-4 shadow-[0px_4px_20px_rgba(18,29,38,0.05)] w-full">
+<p class="font-subtitle-lg text-subtitle-lg text-on-surface mb-1">Yuk cek faktanya, pikiran sehatnya apa?</p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-3">Coba kita lihat dari sudut pandang lain yang lebih netral.</p>
+<div class="bg-surface-container rounded-lg p-3 flex gap-2 items-start">
+<span class="material-symbols-outlined text-primary shrink-0" data-icon="lightbulb" data-weight="fill" style="font-variation-settings: 'FILL' 1;">lightbulb</span>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Tips: Apakah ada bukti nyata pikiran negatifmu itu benar? Atau mungkin mereka cuma lagi sibuk sendiri?</p>
+</div>
+</div>
+</div>
+<div class="pl-14">
+<textarea class="w-full h-32 rounded-xl border border-outline-variant bg-surface-container-lowest p-md font-body-md text-body-md text-on-surface placeholder:text-outline focus:border-primary focus:ring-1 focus:ring-primary transition-colors shadow-[0px_4px_20px_rgba(18,29,38,0.02)] resize-none" placeholder="Tuliskan pikiran baru yang lebih seimbang..."></textarea>
+</div>
+</div>
+</main>
+<!-- Fixed Bottom Actions -->
+<div class="fixed bottom-0 left-0 w-full bg-surface-container-lowest px-margin-mobile py-4 shadow-[0px_-4px_20px_rgba(18,29,38,0.05)] rounded-t-xl z-50 flex flex-col gap-xs">
+<button class="w-full h-14 bg-primary text-on-primary rounded-full font-subtitle-lg text-subtitle-lg flex items-center justify-center gap-2 hover:opacity-90 active:scale-95 transition-all shadow-[0px_8px_24px_rgba(0,103,102,0.2)]">
+<span class="material-symbols-outlined" data-icon="check_circle">check_circle</span>
+            Simpan Catatanku
+        </button>
+<div class="flex items-center justify-center gap-1 text-on-surface-variant opacity-80">
+<span class="material-symbols-outlined text-[16px]" data-icon="cloud_done">cloud_done</span>
+<span class="font-label-md text-label-md font-normal">Tersimpan offline di perangkatmu</span>
+</div>
+</div>
+
+<div id="__proto_nav" style="position:fixed;left:0;right:0;bottom:0;z-index:999999;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 14px;background:rgba(18,29,38,0.92);backdrop-filter:blur(6px);font-family:'Plus Jakarta Sans',-apple-system,sans-serif;">
+  <a href="../kuis_sesi/" style="flex:1;text-align:left;color:#fff;text-decoration:none;font-size:13px;font-weight:600;padding:8px 12px;border-radius:20px;background:rgba(255,255,255,0.12);">&larr; Kuis Sesi</a>
+  <a href="../index.html" title="Kembali ke Peta Prototype" style="color:#fff;text-decoration:none;font-size:18px;padding:8px 10px;border-radius:20px;background:rgba(255,255,255,0.12);">&#8962;</a>
+  <a href="../jurnalku/" style="flex:1;text-align:right;color:#fff;text-decoration:none;font-size:13px;font-weight:600;padding:8px 12px;border-radius:20px;background:#006766;">Jurnalku &rarr;</a>
+</div>
+<div style="height:56px;"></div>
+</body></html>
