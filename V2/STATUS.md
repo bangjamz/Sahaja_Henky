@@ -7,12 +7,13 @@ Catatan serah terima antarsesi dan antaralat. Perbarui setiap akhir sesi kerja. 
 Diperbarui: 12 November 2026, oleh Claude (sesi perancangan bersama Pak Indra).
 
 - Tahap: perancangan. Belum ada kode aplikasi.
-- Dokumen `Rencana Apps` versi 2.1 selesai ditulis: 00, 01, 02, 03, 04, 06, 08 ditulis ulang; 09 sampai 12 baru; 07 ditambah bagian perubahan 2.0 ke 2.1; 05 tidak diubah.
+- Dokumen `Rencana Apps` versi 2.2 (14 berkas, 00 sampai 13). Versi 2.1 menulis ulang 00, 01, 02, 03, 04, 06, 08, menambah 09 sampai 12, dan memperbarui 07; 05 tidak diubah. Versi 2.2 hanya mengganti backend dan menambah 13. Berkas 02, 03, 06 masih berlabel 2.1 karena isinya tidak tersentuh perubahan backend.
 - Berkas alat pengembang AI dibuat: `AGENTS.md`, `CLAUDE.md`, `agen/` (5 peran) dan `agen/claude-code/` (subagen dan perintah Claude Code).
 - Subagen dan perintah Claude Code terpasang di `V2/.claude/` (12 November 2026): 5 subagen dan perintah `/mulai`, `/tinjau`, `/checkpoint`. Belum diuji dari sesi Claude Code yang dibuka di folder `V2`.
 - 12 November 2026: backend diganti dari Supabase ke Laravel dan PostgreSQL dalam Docker Compose di VPS Hostinger KVM 4 milik Pak Indra (T10). Berkas 13 Server dan Operasional ditambahkan. VPS dipakai bersama aplikasi lain.
 - Galeri prototipe GitHub Pages tetap disajikan dari `docs/` di akar repo, salinan identik dari `Old/docs/`. Bila galeri diperbarui, ubah `docs/`, bukan `Old/docs/`.
-- Salinan `Rencana Apps` di Google Drive dicerminkan ke versi 2.2 (14 berkas). Bila dokumen di V2 berubah, cermin perlu disalin ulang.
+- Repo git: semua isi V2 dan pemindahan draft lama ke `Old/` sudah digabung ke `main` lewat PR bangjamz/Sahaja_Henky#1 (12 November 2026). Situs galeri prototipe di GitHub Pages diperiksa dan tetap tampil.
+- Salinan `Rencana Apps` di Google Drive dicerminkan ke versi 2.2 (14 berkas) pada 12 November 2026. Sesudah itu baris versi di 01, 09, 10, dan 11 diubah di V2, jadi keempat berkas itu di Drive perlu disalin ulang (konektor Drive di Claude Code tidak bisa mengganti isi berkas).
 
 ## Sedang dikerjakan
 
@@ -28,11 +29,12 @@ Dua hal untuk dicek di luar repo:
 
 ## Langkah berikutnya
 
-1. Pak Indra meninjau dokumen 2.1 dan menetapkan keputusan yang menghambat.
-2. M0-08: prototipe klik ponsel dan desktop dari prompt di dokumen 02.
-3. M0-09: papan gaya, ikon aplikasi, lembar karakter maskot.
-4. M0-02 sampai M0-07: penyiapan monorepo, token, komponen dasar, cangkang tata letak, backend Laravel di Docker lokal, pemeriksa aturan tulis.
-5. M0-11 dan M0-12: Claude Code memeriksa isi VPS (hanya membaca) lalu menyiapkan staging, cadangan, dan pemantauan. Butuh akses SSH dari Pak Indra.
+1. Pak Indra meninjau dokumen 2.2 dan menetapkan keputusan yang menghambat.
+2. M0-10: mulai urus akun Google Play organisasi (D-U-N-S), domain, dan email resmi. Prosesnya lama, jadi sebaiknya berjalan bersamaan dengan langkah lain.
+3. M0-08: prototipe klik ponsel dan desktop dari prompt di dokumen 02.
+4. M0-09: papan gaya, ikon aplikasi, lembar karakter maskot.
+5. M0-02 sampai M0-07: penyiapan monorepo, token, komponen dasar, cangkang tata letak, backend Laravel di Docker lokal, pemeriksa aturan tulis.
+6. M0-11 dan M0-12: Claude Code memeriksa isi VPS (hanya membaca) lalu menyiapkan staging, cadangan, dan pemantauan. Butuh akses SSH dari Pak Indra.
 
 ## Riwayat
 
@@ -43,3 +45,4 @@ Dua hal untuk dicek di luar repo:
 | 11 Nov 2026 | Claude | Rencana Apps versi 2.1, berkas alat pengembang AI, peran peninjau |
 | 12 Nov 2026 | Claude | Cermin Rencana Apps 2.1 ke Google Drive |
 | 12 Nov 2026 | Claude | Versi 2.2: backend Laravel dan PostgreSQL di VPS sendiri, berkas 13 |
+| 12 Nov 2026 | Claude | Pasang `.claude/`, komit repo, PR #1 digabung ke `main`, galeri tetap di `docs/`, label versi 01, 09, 10, 11 diselaraskan ke 2.2 |

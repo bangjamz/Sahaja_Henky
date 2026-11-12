@@ -1,6 +1,6 @@
 # Glosarium dan Kamus Teks
 
-Versi 2.1, 11 November 2026. Satu rujukan untuk istilah, nama fitur, dan teks antarmuka yang sering dipakai, supaya dokumen, kode, dan tampilan memakai kata yang sama siapa pun yang mengerjakannya.
+Versi 2.2, 12 November 2026: bagian backend disesuaikan dengan keputusan T10, isi lain tetap versi 2.1 (11 November 2026). Satu rujukan untuk istilah, nama fitur, dan teks antarmuka yang sering dipakai, supaya dokumen, kode, dan tampilan memakai kata yang sama siapa pun yang mengerjakannya.
 
 ## 1. Istilah penelitian (wajib sama dengan naskah disertasi)
 

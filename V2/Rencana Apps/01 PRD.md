@@ -1,6 +1,6 @@
 # PRD SAHAJA: Platform Edukasi Pencegahan IMS untuk Siswa SMP
 
-Versi 2.1, 11 November 2026. Menggantikan versi 2.0 (21 Oktober 2026). Perubahan utama dari 2.0: aplikasi kini mewujudkan model secara utuh (Mode Kelas, jalur keluarga, siklus sesi seragam, faktor pelindung), tampilan dibedakan untuk ponsel dan layar lebar, peran pengguna memakai cakupan, dan ada modul opsional yang bisa dimatikan. Ringkasan perubahan ada di "07 Perbandingan dengan Draft Lama.md". Pembaruan 12 November 2026: backend memakai Laravel dan PostgreSQL di VPS sendiri (file 04 dan 13).
+Versi 2.2, 12 November 2026: bagian backend disesuaikan dengan keputusan T10, isi lain tetap versi 2.1 (11 November 2026). Menggantikan versi 2.0 (21 Oktober 2026). Perubahan utama dari 2.0: aplikasi kini mewujudkan model secara utuh (Mode Kelas, jalur keluarga, siklus sesi seragam, faktor pelindung), tampilan dibedakan untuk ponsel dan layar lebar, peran pengguna memakai cakupan, dan ada modul opsional yang bisa dimatikan. Ringkasan perubahan ada di "07 Perbandingan dengan Draft Lama.md". Pembaruan 12 November 2026: backend memakai Laravel dan PostgreSQL di VPS sendiri (file 04 dan 13).
 
 Nama kerja: **SAHAJA** (Sahabat Remaja Jaga Diri). Nama final menunggu keputusan D2.
 

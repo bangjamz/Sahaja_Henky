@@ -1,6 +1,6 @@
 # Konvensi Pengembangan dan Definisi Selesai
 
-Versi 2.1, 11 November 2026. Aturan ini berlaku untuk semua orang dan semua alat pengembang AI yang menyentuh repo. Ringkasannya ada di `AGENTS.md`; dokumen ini adalah versi lengkapnya.
+Versi 2.2, 12 November 2026: bagian backend disesuaikan dengan keputusan T10, isi lain tetap versi 2.1 (11 November 2026). Aturan ini berlaku untuk semua orang dan semua alat pengembang AI yang menyentuh repo. Ringkasannya ada di `AGENTS.md`; dokumen ini adalah versi lengkapnya.
 
 ## 1. Alur kerja satu tugas
 
