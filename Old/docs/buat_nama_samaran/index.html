@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SAHAJA - Buat Nama Samaran</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#75340b",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed-dim": "#ffb691",
+                        "inverse-on-surface": "#e8f2ff",
+                        "secondary-container": "#316fe2",
+                        "primary-fixed": "#88f4f2",
+                        "surface": "#f7f9ff",
+                        "on-tertiary-fixed": "#341100",
+                        "inverse-surface": "#27313c",
+                        "primary-container": "#008281",
+                        "on-surface-variant": "#3d4949",
+                        "error": "#ba1a1a",
+                        "surface-container": "#e4effd",
+                        "surface-container-highest": "#d9e3f1",
+                        "on-primary-fixed": "#002020",
+                        "secondary-fixed": "#d9e2ff",
+                        "on-secondary-fixed-variant": "#00429c",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "background": "#f7f9ff",
+                        "outline": "#6d7979",
+                        "outline-variant": "#bcc9c8",
+                        "on-primary-container": "#f3fffe",
+                        "on-secondary-container": "#fefcff",
+                        "surface-tint": "#006a69",
+                        "tertiary-container": "#ae6035",
+                        "tertiary": "#8f481f",
+                        "primary": "#006766",
+                        "on-tertiary-container": "#fffbff",
+                        "on-error": "#ffffff",
+                        "inverse-primary": "#6bd7d6",
+                        "on-surface": "#121d26",
+                        "surface-container-high": "#dfe9f7",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed": "#ffdbcb",
+                        "on-secondary-fixed": "#001945",
+                        "surface-bright": "#f7f9ff",
+                        "surface-variant": "#d9e3f1",
+                        "secondary": "#0055c7",
+                        "error-container": "#ffdad6",
+                        "primary-fixed-dim": "#6bd7d6",
+                        "on-primary": "#ffffff",
+                        "surface-dim": "#d1dbe8",
+                        "on-background": "#121d26",
+                        "on-primary-fixed-variant": "#00504f",
+                        "surface-container-low": "#edf4ff",
+                        "secondary-fixed-dim": "#b0c6ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "sm": "12px",
+                        "xs": "8px",
+                        "lg": "24px",
+                        "md": "16px",
+                        "xl": "32px",
+                        "gutter": "16px",
+                        "margin-mobile": "20px",
+                        "base": "4px"
+                    },
+                    "fontFamily": {
+                        "subtitle-lg": ["Plus Jakarta Sans"],
+                        "label-md": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "headline-lg-mobile": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "subtitle-lg": ["18px", { "lineHeight": "26px", "fontWeight": "600" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "700" }],
+                        "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["22px", { "lineHeight": "28px", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col">
+<!-- Top Navigation (Transactional, no bottom nav or side nav) -->
+<header class="flex justify-between items-center px-margin-mobile h-14 w-full bg-surface top-0 sticky z-50">
+<button class="text-on-surface-variant hover:opacity-80 transition-opacity p-2 -ml-2 active:scale-95 transition-transform duration-200">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-primary">SAHAJA</span>
+<div class="w-10"></div> <!-- Spacer for center alignment -->
+</header>
+<main class="flex-grow px-margin-mobile pt-lg pb-xl flex flex-col max-w-md mx-auto w-full">
+<div class="text-center mb-lg">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-xs">Buat Nama Samaran</h1>
+<div class="bg-tertiary-fixed/30 rounded-lg p-sm inline-flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary-container text-[20px]" data-icon="info">info</span>
+<p class="font-body-md text-body-md text-tertiary-container font-medium">Jangan pakai nama aslimu ya</p>
+</div>
+</div>
+<div class="mb-xl bg-surface-container-lowest rounded-xl p-md shadow-[0px_4px_20px_rgba(18,29,38,0.05)] border border-surface-variant">
+<h2 class="font-subtitle-lg text-subtitle-lg mb-md text-center text-on-surface">Pilih Avatar</h2>
+<div class="grid grid-cols-4 gap-sm">
+<!-- Avatar Options (Simulated with distinct colors for a cartoon feel) -->
+<button class="aspect-square rounded-full bg-primary-container flex items-center justify-center border-4 border-primary relative active:scale-95 transition-transform">
+<img alt="Avatar" class="w-full h-full object-cover rounded-full" data-alt="A stylized 2D cartoon avatar of a friendly character with a teal hoodie. Clean vector illustration style, flat colors, thick outlines, isolated on a transparent background. Designed for teenagers, modern friendly aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhuaypvR9gntLn_FVgup6nJ7ozjrnTKwpzajIcqgKJ6Xk1oZ11vv_Nj0PRmkvckSsRXmxYpUkF0Sqkqpg33DEBCeDj1qLhcJcOOFGqERiAWibpkUeMnZglRU4Vkqm-rhlCPThfvXn9Qm-3ZQoFYZEYrQ5W2fvOHqKQWO02cdh3ITlkiAt1XkqZFJbGRMo4ytc14eoEifSVYy2-3NvMeCtTPvej3U_mtA0HwEuq1L1Qf7W0VadRRPd_sQ"/>
+<div class="absolute -bottom-1 -right-1 bg-primary text-on-primary rounded-full w-6 h-6 flex items-center justify-center border-2 border-surface-container-lowest">
+<span class="material-symbols-outlined text-[14px]" data-icon="check">check</span>
+</div>
+</button>
+<button class="aspect-square rounded-full bg-secondary-container flex items-center justify-center border-2 border-transparent hover:border-outline-variant active:scale-95 transition-transform">
+<img alt="Avatar" class="w-full h-full object-cover rounded-full" data-alt="A stylized 2D cartoon avatar of a cute robot. Clean vector illustration style, flat colors, thick outlines, isolated on a transparent background. Designed for teenagers, modern friendly aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrS1aXpMra3dLWYTk8PQEPDG0-RSrqLgClkSauuelaJVVhC8F5GFXFl1tSg9ULd7sVGJnR-VEhVBMdaLnxNJlC2lRnitjVY_CGSJkr0ww7X11cAnoIlcZRYapwTsvX8mjUcNlUkI9veMrwJ8KmHYaaHmk-dx5_Qykx9OpnPDmWc5ludGTmxnV9pjik7joZzBrug0tDkdqes7hUfVW4iwXGSMOAVg2GhPn-Uikj1VyXuQz6OfNUJQvjDw"/>
+</button>
+<button class="aspect-square rounded-full bg-tertiary-container flex items-center justify-center border-2 border-transparent hover:border-outline-variant active:scale-95 transition-transform">
+<img alt="Avatar" class="w-full h-full object-cover rounded-full" data-alt="A stylized 2D cartoon avatar of a sleepy cat. Clean vector illustration style, flat colors, thick outlines, isolated on a transparent background. Designed for teenagers, modern friendly aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBe0_Go1nGGIpzoQ-vZW7cZOqBwNVaveMk6X3-4UVOcLPK0ctrGU-yw5DrfpW2rnm3VmAb2UAgd96X8VCNXlVySc5KptRB2BrG_Nslnhl0njC_FzzCge2Y1sXsjXpQACl4VgxTXqfpL__TDqYRtWWT_u4dVkIufD-4K45F9uhoUlvbVoDx-c0LDT9tt1dRuylOVNlPbXb9EqEkSv2TYz1uM7f1e49P9TmFDnt_GdhAivphCXwNgVIsL0Q"/>
+</button>
+<button class="aspect-square rounded-full bg-error-container flex items-center justify-center border-2 border-transparent hover:border-outline-variant active:scale-95 transition-transform">
+<img alt="Avatar" class="w-full h-full object-cover rounded-full" data-alt="A stylized 2D cartoon avatar of a cool dog with sunglasses. Clean vector illustration style, flat colors, thick outlines, isolated on a transparent background. Designed for teenagers, modern friendly aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDB4Q3R_iPltS9DxqO4s_rN9ioSFtkiZ07-PFLTvWhRyDIsNhtvSnIfnbgctsuSXkYK_iwAVT0CoCihZlv8YLiUmHmgLtasCS6VWLzWJIU-OKgwc76mwh_5WOc2KClm9vHF2CN40JneG_pc4AmILS9Gx-lUSQnBKkI_8mVPbX5GEYYlH9t4YvfJOhgnhpUcQVaCVmVRIxW8NFDkk3ZzRDUGCBS5z1jgXE1CAgFwJzW-9z2406KlSjfXbw"/>
+</button>
+<button class="aspect-square rounded-full bg-primary-fixed flex items-center justify-center border-2 border-transparent hover:border-outline-variant active:scale-95 transition-transform">
+<img alt="Avatar" class="w-full h-full object-cover rounded-full" data-alt="A stylized 2D cartoon avatar of a friendly alien. Clean vector illustration style, flat colors, thick outlines, isolated on a transparent background. Designed for teenagers, modern friendly aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwcjohVNTLWCryvH81fx6elNCrWAfLiYmd-6v0sfXc_jTsSqgBTiY-7P9mDULKWhodKD-pK_A9_AuqIur_7TnaG447pqkHKvZtWAqer4EVDMyGlvyt9-2TBRDVApSR2v_G1ZWFSUYYKRk_MDZJoSBl7hFGC4FuhOE1h6aQNIDyVHvh3NFgKW-L0cSnhRZhoZCO98vond8T3YG6PidKWtDqC_mFg326CWV2Q1VzsT06M7V4rQhCjyTMWA"/>
+</button>
+<button class="aspect-square rounded-full bg-secondary-fixed flex items-center justify-center border-2 border-transparent hover:border-outline-variant active:scale-95 transition-transform">
+<img alt="Avatar" class="w-full h-full object-cover rounded-full" data-alt="A stylized 2D cartoon avatar of a ninja. Clean vector illustration style, flat colors, thick outlines, isolated on a transparent background. Designed for teenagers, modern friendly aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcJGn9ufpUAOfiWdWket5F5Nwh7AwxQwGb19NTrwc36Q75hXUwEeJ0cC3r-xJhM3lCKuHdhH-XF_p8PZMbT8doii1Ily6u111RJifjVF-bc-mrABVtv-JaDjFIQhmpsM9-CB3tvk6Y8A7vBgRhKDsZWzGRtV6ar5sJ9kuVkAsGUrNedjMgYXzGERCFgGIcwWIPH0dZNX_31_Ih258vq-X6XZoTERcuTY66kQyf6exKdUs2bZMsB_9IXQ"/>
+</button>
+<button class="aspect-square rounded-full bg-tertiary-fixed flex items-center justify-center border-2 border-transparent hover:border-outline-variant active:scale-95 transition-transform">
+<img alt="Avatar" class="w-full h-full object-cover rounded-full" data-alt="A stylized 2D cartoon avatar of a wise owl. Clean vector illustration style, flat colors, thick outlines, isolated on a transparent background. Designed for teenagers, modern friendly aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtj3YaqhKqDNkZhSxwXTAgUMvJ3YzfLKzyt3ck3cw74ehfB5VJqrr7xaPdnsmqKyw5nTG5bkBCaBufxj3UjiXgOHqKHD1s0MTY31GS_IRyHbc-C85vFXxqaLfuTMQB-HbtxPa5SOc1ojyMB8yfCA1SY4Knpc2B9Y_e44lgi0JvAzlUMc9K09zCMwMahE1Ts4kxvtssI-R3Blh1UkcFR4i3NXhrc28mVBHqKySb-fQljZ2M2-K_q86zCw"/>
+</button>
+<button class="aspect-square rounded-full bg-surface-variant flex items-center justify-center border-2 border-transparent hover:border-outline-variant active:scale-95 transition-transform">
+<img alt="Avatar" class="w-full h-full object-cover rounded-full" data-alt="A stylized 2D cartoon avatar of a happy ghost. Clean vector illustration style, flat colors, thick outlines, isolated on a transparent background. Designed for teenagers, modern friendly aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbclN2_4zCqg7cBAkF8wVA5uIPDqEorSTX6HT_e8oMxnkyjrPWsULjPE2AWh8genYoifQG3ialRogQWyh_HzpASELYxyc-pgtFeOtBv6edlFLQ-33-9nnfUbkNCGDrny07X5w50VaBdIZK3la0OJ2O9eypcdsCiPzHv9hCmVp8neYymxPVwrQULZLSuOEnQGLlHoPjahT1iJhFGvTJ_59-kCPoIPjE21-69uoMMHkuBF9JgHRUF4iuJw"/>
+</button>
+<button class="aspect-square rounded-full bg-inverse-primary flex items-center justify-center border-2 border-transparent hover:border-outline-variant active:scale-95 transition-transform">
+<img alt="Avatar" class="w-full h-full object-cover rounded-full" data-alt="A stylized 2D cartoon avatar of a space traveler. Clean vector illustration style, flat colors, thick outlines, isolated on a transparent background. Designed for teenagers, modern friendly aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAe9Fep9ntKWNGDZ7CEtORs7dMwhvp5xDrT4QqqbqZEaioQyYhN5YGq26-E-P2mr-Z7u5BtlOKY2H14W_sJdetRdKDltI33J4z9zlq6RPlMDCO_Tpm5z7HPLtcfhHQwlpgMvzG4E68iGuIhLXwBAh3WGG-Jd6B7BKHqMU2Qv8yOYmh_32B55jjAHqVjOeAioHbm4119dJNeKBr01faRjZz2HaUoVI107z4F4Pw3mf-wzUK2Dry3Gtwzzw"/>
+</button>
+<button class="aspect-square rounded-full bg-secondary-fixed-dim flex items-center justify-center border-2 border-transparent hover:border-outline-variant active:scale-95 transition-transform">
+<img alt="Avatar" class="w-full h-full object-cover rounded-full" data-alt="A stylized 2D cartoon avatar of a dragon. Clean vector illustration style, flat colors, thick outlines, isolated on a transparent background. Designed for teenagers, modern friendly aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMKRmcuMHVV7EYfliwqHY2KRNpmLohqwJp0inV4zYCdqFeeMZOg6071Pe-XPis-rElx9rEMmZAkjIapqOTYcBIMJ_WFj3soQRm3VkVohiN-OBB7MyA9nSiCs7ssQIJK1pNei6oSH4RECPncJfLU0TWuoZo4VqWX5lJjji6XpOzn9QbGzkOp1iTImZqqK2vL3KMyBZBm_NJL3JBRvy4D2Rdcbn9DtaIbgssXQIkWpC-U6yB3l6T5w9giA"/>
+</button>
+<button class="aspect-square rounded-full bg-tertiary-fixed-dim flex items-center justify-center border-2 border-transparent hover:border-outline-variant active:scale-95 transition-transform">
+<img alt="Avatar" class="w-full h-full object-cover rounded-full" data-alt="A stylized 2D cartoon avatar of a lion. Clean vector illustration style, flat colors, thick outlines, isolated on a transparent background. Designed for teenagers, modern friendly aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7ZQlp-q-32CxMLT6vEP9taxnE6FIg6lB0lv27Tze0rOJq87iCtQrG84Zlgvf1qbesMq0U3fAmKahHK9de1udl4XYc1kKmmlabp1nvM6-PZKbIlhAo4Ztjpd6zbeyhXq9ANQBFVN0tQ7rwChOkWg4992plMHdSDJAs8ZRt6lvxEJi7VnDZtO9BLs652XrRuIPYOV5OCryOZqBuUQ0hs22MJ-HfhXwzqDW3S_NsLcSBGU0xNr-o2AfV9w"/>
+</button>
+<button class="aspect-square rounded-full bg-outline-variant flex items-center justify-center border-2 border-transparent hover:border-outline-variant active:scale-95 transition-transform">
+<img alt="Avatar" class="w-full h-full object-cover rounded-full" data-alt="A stylized 2D cartoon avatar of a bear. Clean vector illustration style, flat colors, thick outlines, isolated on a transparent background. Designed for teenagers, modern friendly aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaAC-9sFJg7OKU2nFJLGnbjSE5WBt8RaSZkXoyoe9XXvfifPKzEfuE-cEwJw5ZPAuQem2uoJkLq0qFWEXF_pA1OmS_STBN9efmkbSYAJ8IEbmVKb0u9erjD1F1i4BUIwQw6WcHqsHfvw6tJ7mY5LMvn18rP3sKVzowO38doDsJ890NnieY9a_Y868NuryVkMjdVeSxWCsiEAOVk_aV7AVtP36-UKHlgGjhi0nOQ0-Is36_cCfLVc2PnA"/>
+</button>
+</div>
+</div>
+<div class="mb-auto">
+<label class="block font-subtitle-lg text-subtitle-lg text-on-surface mb-xs" for="alias-input">Nama Samaran</label>
+<div class="relative flex items-center">
+<input class="w-full h-[56px] px-md pr-[60px] rounded-lg border border-outline-variant bg-surface-container-lowest text-on-surface font-body-lg text-body-lg focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors" id="alias-input" placeholder="Ketik nama samaran..." type="text" value="Bintang27"/>
+<button aria-label="Acak nama" class="absolute right-2 p-2 text-primary hover:bg-primary-container/20 rounded-full transition-colors active:scale-95 flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="casino">casino</span>
+</button>
+</div>
+<p class="mt-2 font-body-md text-body-md text-on-surface-variant text-center">Tap dadu untuk bikin nama otomatis</p>
+</div>
+<div class="pt-lg">
+<button class="w-full h-[48px] bg-primary text-on-primary rounded-full font-subtitle-lg text-subtitle-lg flex items-center justify-center shadow-[0px_8px_24px_rgba(0,103,102,0.2)] hover:opacity-90 active:scale-95 transition-all">
+                Simpan Profil
+            </button>
+</div>
+</main>
+
+<div id="__proto_nav" style="position:fixed;left:0;right:0;bottom:0;z-index:999999;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 14px;background:rgba(18,29,38,0.92);backdrop-filter:blur(6px);font-family:'Plus Jakarta Sans',-apple-system,sans-serif;">
+  <a href="../persetujuan_siswa/" style="flex:1;text-align:left;color:#fff;text-decoration:none;font-size:13px;font-weight:600;padding:8px 12px;border-radius:20px;background:rgba(255,255,255,0.12);">&larr; Persetujuan (Consent)</a>
+  <a href="../index.html" title="Kembali ke Peta Prototype" style="color:#fff;text-decoration:none;font-size:18px;padding:8px 10px;border-radius:20px;background:rgba(255,255,255,0.12);">&#8962;</a>
+  <a href="../tur_singkat/" style="flex:1;text-align:right;color:#fff;text-decoration:none;font-size:13px;font-weight:600;padding:8px 12px;border-radius:20px;background:#006766;">Tur Aplikasi &rarr;</a>
+</div>
+<div style="height:56px;"></div>
+</body></html>

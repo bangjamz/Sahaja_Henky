@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SAHAJA - Forum</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#75340b",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed-dim": "#ffb691",
+                        "inverse-on-surface": "#e8f2ff",
+                        "secondary-container": "#316fe2",
+                        "primary-fixed": "#88f4f2",
+                        "surface": "#f7f9ff",
+                        "on-tertiary-fixed": "#341100",
+                        "inverse-surface": "#27313c",
+                        "primary-container": "#008281",
+                        "on-surface-variant": "#3d4949",
+                        "error": "#ba1a1a",
+                        "surface-container": "#e4effd",
+                        "surface-container-highest": "#d9e3f1",
+                        "on-primary-fixed": "#002020",
+                        "secondary-fixed": "#d9e2ff",
+                        "on-secondary-fixed-variant": "#00429c",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "background": "#f7f9ff",
+                        "outline": "#6d7979",
+                        "outline-variant": "#bcc9c8",
+                        "on-primary-container": "#f3fffe",
+                        "on-secondary-container": "#fefcff",
+                        "surface-tint": "#006a69",
+                        "tertiary-container": "#ae6035",
+                        "tertiary": "#8f481f",
+                        "primary": "#006766",
+                        "on-tertiary-container": "#fffbff",
+                        "on-error": "#ffffff",
+                        "inverse-primary": "#6bd7d6",
+                        "on-surface": "#121d26",
+                        "surface-container-high": "#dfe9f7",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed": "#ffdbcb",
+                        "on-secondary-fixed": "#001945",
+                        "surface-bright": "#f7f9ff",
+                        "surface-variant": "#d9e3f1",
+                        "secondary": "#0055c7",
+                        "error-container": "#ffdad6",
+                        "primary-fixed-dim": "#6bd7d6",
+                        "on-primary": "#ffffff",
+                        "surface-dim": "#d1dbe8",
+                        "on-background": "#121d26",
+                        "on-primary-fixed-variant": "#00504f",
+                        "surface-container-low": "#edf4ff",
+                        "secondary-fixed-dim": "#b0c6ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "sm": "12px",
+                        "xs": "8px",
+                        "lg": "24px",
+                        "md": "16px",
+                        "xl": "32px",
+                        "gutter": "16px",
+                        "margin-mobile": "20px",
+                        "base": "4px"
+                    },
+                    "fontFamily": {
+                        "subtitle-lg": ["Plus Jakarta Sans"],
+                        "label-md": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "headline-lg-mobile": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "subtitle-lg": ["18px", { "lineHeight": "26px", "fontWeight": "600" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "700" }],
+                        "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["22px", { "lineHeight": "28px", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #F7F9FB; /* Level 0 (Background) from style guidance */
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-surface antialiased bg-background">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-surface w-full top-0 sticky flex justify-between items-center px-margin-mobile h-14 z-40">
+<div class="flex items-center gap-xs">
+<div class="w-8 h-8 rounded-full overflow-hidden bg-primary-container flex items-center justify-center text-on-primary-container">
+<img class="w-full h-full object-cover" data-alt="A small, friendly avatar of 'Saja', a gender-neutral teenage mascot wearing a cozy teal hoodie. The style is modern, soft, vector illustration suitable for a supportive health education app. The background is a flat, light color to make the character pop. Friendly expression, simple lines, clean design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAyiqLn28U0X9wCAjqM36unSOcaer0tRiJ4zcm5SkvuMmm8n53qQMPJX7Qaj5JTZsRnMY5Dd2A_yCl1kF98HMcxP7jQzIBkY5OHQ4W7KChZKLkuIDj87tor27-XYpVXPMbSjccnOuFFk1OuXF3j3uZvNhwViBwBp-G-6JzlQXSyApTjSrFAch_9K1YbYB6Oo0ILVyZ6dvsYDFHCc_UR6gX3CimSBxZkWPbADIPQGB5Kyg6z6z6sC9wbg"/>
+</div>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary dark:text-primary-fixed-dim">SAHAJA</h1>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:opacity-80 transition-opacity active:scale-95 transition-transform duration-200 text-primary dark:text-primary-fixed-dim">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+</header>
+<!-- Main Canvas -->
+<main class="pb-24 px-margin-mobile pt-sm max-w-2xl mx-auto md:px-0">
+<!-- Banner -->
+<div class="bg-surface-container-highest rounded-xl p-md mb-lg flex items-start gap-sm shadow-[0px_4px_20px_rgba(18,29,38,0.05)] border border-outline-variant/30">
+<span class="material-symbols-outlined text-primary mt-1" data-icon="verified_user">verified_user</span>
+<div>
+<p class="font-body-md text-on-surface-variant">
+                    Forum ini dijaga Bapak/Ibu fasilitator untuk memastikan ruang diskusi yang aman dan nyaman.
+                </p>
+</div>
+</div>
+<!-- Tabs -->
+<div class="flex gap-sm mb-lg overflow-x-auto pb-2 -mx-margin-mobile px-margin-mobile md:mx-0 md:px-0 scrollbar-hide">
+<button class="bg-primary text-on-primary px-lg py-sm rounded-full font-subtitle-lg text-subtitle-lg whitespace-nowrap shadow-[0px_8px_24px_rgba(0,103,102,0.15)] transition-transform active:scale-95">
+                Kelas 8A
+            </button>
+<button class="bg-surface-container-lowest text-on-surface-variant px-lg py-sm rounded-full font-subtitle-lg text-subtitle-lg whitespace-nowrap border border-outline-variant hover:bg-surface-container-low transition-colors">
+                Sekolah
+            </button>
+<button class="bg-surface-container-lowest text-on-surface-variant px-lg py-sm rounded-full font-subtitle-lg text-subtitle-lg whitespace-nowrap border border-outline-variant hover:bg-surface-container-low transition-colors">
+                Umum
+            </button>
+</div>
+<!-- Own Pending Post -->
+<div class="bg-surface-container-lowest rounded-2xl p-md mb-lg border border-outline-variant/30 opacity-70 relative overflow-hidden">
+<div class="absolute top-0 right-0 bg-tertiary text-on-tertiary px-sm py-xs rounded-bl-lg font-label-md text-label-md flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px]" data-icon="pending">pending</span>
+                Menunggu persetujuan guru
+            </div>
+<div class="mt-xs">
+<span class="inline-block px-sm py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-md text-label-md mb-xs">Tanya</span>
+<h3 class="font-subtitle-lg text-subtitle-lg text-on-surface mb-xs">Cara mengatasi jerawat yang tiba-tiba banyak?</h3>
+<p class="font-body-md text-on-surface-variant line-clamp-2">Halo teman-teman, akhir-akhir ini jerawatku nambah banyak banget padahal udah rajin cuci muka. Ada saran nggak ya?</p>
+</div>
+</div>
+<!-- Thread List -->
+<div class="space-y-md">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest rounded-2xl p-md shadow-[0px_4px_20px_rgba(18,29,38,0.05)] active:scale-[0.98] transition-transform duration-200">
+<div class="flex justify-between items-start mb-sm">
+<span class="inline-block px-sm py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-md text-label-md">Cerita</span>
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]" data-icon="forum">forum</span>
+<span class="font-body-md text-body-md">12</span>
+</div>
+</div>
+<h3 class="font-subtitle-lg text-subtitle-lg text-on-surface mb-sm">Pengalaman pertama kali menstruasi di sekolah</h3>
+<div class="flex items-center gap-xs mt-sm pt-sm border-t border-surface-variant">
+<div class="w-6 h-6 rounded-full bg-surface-variant overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A small avatar of a cute, simplified generic animal or abstract shape, designed as an anonymous profile picture for a teenager. Soft pastel colors, friendly vibe, modern flat vector illustration style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbwlWuD1vx9bBm8ePUXnO5i75QqZ-Xcia_CIU5Mh8QR9tvnCQ1q_CcZu8RcroFpFbuCHwSj_Tq9h11Zl2RVLKVz7OrUz7ZNMJyP7sk809HSkfBZcSqhRuQyGPLauuy9Y9g27P5LY757gjAwUjw743yWwmXOrIjJw0b_tsxDQfl1wqEFfzrkx8vSCsw20YJFnL3XMmzcFW8ikbPk2hCcD6pZRo4fZQu3sBHXCXGlehuKstlPWHE7Lw13w"/>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant">Siswa_Anon123</span>
+<span class="font-label-md text-label-md text-outline-variant mx-1">•</span>
+<span class="font-label-md text-label-md text-outline">2 jam yang lalu</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest rounded-2xl p-md shadow-[0px_4px_20px_rgba(18,29,38,0.05)] active:scale-[0.98] transition-transform duration-200">
+<div class="flex justify-between items-start mb-sm">
+<span class="inline-block px-sm py-1 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-md text-label-md">Info</span>
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]" data-icon="forum">forum</span>
+<span class="font-body-md text-body-md">5</span>
+</div>
+</div>
+<h3 class="font-subtitle-lg text-subtitle-lg text-on-surface mb-sm">Tips mengatur jadwal belajar dan main game</h3>
+<div class="flex items-center gap-xs mt-sm pt-sm border-t border-surface-variant">
+<div class="w-6 h-6 rounded-full bg-surface-variant overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A small avatar featuring a stylized gamepad or book icon, acting as an anonymous user profile. Minimalist, friendly, soft colors, suitable for a supportive educational app for teens." src="https://lh3.googleusercontent.com/aida-public/AB6AXuATPUyRF97Y4NQcbB7oco0RLqNQTEuX_t489LCKhP2vNtMOz0cZZV9ydRS23RE_YWSJH9Q7XS1Ylt4po7amvR3w4ocv8smyj2aK_o-5ngdY3zhdcd99I9q5F3l8Nes0e2TO93LSH9JgxRGo1B5-iNRJUhPSDD06-LyWcpRrjWo1yQWeqElkbkfrIDH4SAbt_htXHQWAAWk9uwTCKoQ0_zX-MDVyEn3QAlaBTBRnn_uEdjrw_3YHtsF5Vg"/>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant">GamerBelajar</span>
+<span class="font-label-md text-label-md text-outline-variant mx-1">•</span>
+<span class="font-label-md text-label-md text-outline">5 jam yang lalu</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest rounded-2xl p-md shadow-[0px_4px_20px_rgba(18,29,38,0.05)] active:scale-[0.98] transition-transform duration-200">
+<div class="flex justify-between items-start mb-sm">
+<span class="inline-block px-sm py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-md text-label-md">Tanya</span>
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]" data-icon="forum">forum</span>
+<span class="font-body-md text-body-md">0</span>
+</div>
+</div>
+<h3 class="font-subtitle-lg text-subtitle-lg text-on-surface mb-sm">Kenapa suaraku mulai berubah ya?</h3>
+<div class="flex items-center gap-xs mt-sm pt-sm border-t border-surface-variant">
+<div class="w-6 h-6 rounded-full bg-surface-variant overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A simple, cute avatar illustration of a musical note or microphone, representing a user. Soft pastel hues, clean lines, modern vector style, friendly and non-threatening." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7hP54W0Bcf4KxHc8RxcFWo_IzFpdofyrkKpnU13ZU9k8oTgwMk1qTKilPzSaD4K4dmMGDTpyYhcBufZuAOoFVQDKDC4-9mPz5Biwo944EwK3ST1AjchSLWhrhMDylIa_UR6Dx_Dp-Y6d5wtRVPtqW9fGhicu8Ayb5J5iWmGFMi97nFvGwUprW7Q3ZMjYS0_IKpLoOBR5YwNExNVMDjYBrEhdag0x2H86mTBIO7h9bm0tC3h9m4ouBUw"/>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant">Andi_8A</span>
+<span class="font-label-md text-label-md text-outline-variant mx-1">•</span>
+<span class="font-label-md text-label-md text-outline">1 hari yang lalu</span>
+</div>
+</div>
+</div>
+</main>
+<!-- FAB -->
+<button class="fixed bottom-24 right-margin-mobile md:right-auto md:left-[calc(50%+250px)] w-14 h-14 bg-primary text-on-primary rounded-2xl flex items-center justify-center shadow-[0px_8px_24px_rgba(0,103,102,0.3)] hover:scale-105 active:scale-95 transition-transform z-40">
+<span class="material-symbols-outlined text-[28px]" data-icon="add">add</span>
+</button>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center pt-2 pb-4 px-2 shadow-[0px_-4px_20px_rgba(18,29,38,0.05)] dark:shadow-none bg-surface-container-lowest dark:bg-inverse-surface rounded-t-xl z-50 md:hidden">
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant hover:bg-surface-container-high dark:hover:bg-surface-variant transition-colors active:scale-90 transition-transform duration-200 p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-md text-label-md mt-1">Beranda</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant hover:bg-surface-container-high dark:hover:bg-surface-variant transition-colors active:scale-90 transition-transform duration-200 p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="font-label-md text-label-md mt-1">Belajar</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary dark:text-primary-fixed-dim font-bold bg-primary-container/20 dark:bg-primary-container/40 rounded-full px-4 py-1 hover:bg-surface-container-high dark:hover:bg-surface-variant transition-colors active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="forum">forum</span>
+<span class="font-label-md text-label-md mt-1">Forum</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant hover:bg-surface-container-high dark:hover:bg-surface-variant transition-colors active:scale-90 transition-transform duration-200 p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label-md text-label-md mt-1">Profil</span>
+</a>
+</nav>
+<!-- Style block to hide scrollbar for tabs -->
+<style>
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+
+<div id="__proto_nav" style="position:fixed;left:0;right:0;bottom:0;z-index:999999;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 14px;background:rgba(18,29,38,0.92);backdrop-filter:blur(6px);font-family:'Plus Jakarta Sans',-apple-system,sans-serif;">
+  <a href="../jurnalku/" style="flex:1;text-align:left;color:#fff;text-decoration:none;font-size:13px;font-weight:600;padding:8px 12px;border-radius:20px;background:rgba(255,255,255,0.12);">&larr; Jurnalku</a>
+  <a href="../index.html" title="Kembali ke Peta Prototype" style="color:#fff;text-decoration:none;font-size:18px;padding:8px 10px;border-radius:20px;background:rgba(255,255,255,0.12);">&#8962;</a>
+  <a href="../detail_thread/" style="flex:1;text-align:right;color:#fff;text-decoration:none;font-size:13px;font-weight:600;padding:8px 12px;border-radius:20px;background:#006766;">Detail Thread &rarr;</a>
+</div>
+<div style="height:56px;"></div>
+</body></html>

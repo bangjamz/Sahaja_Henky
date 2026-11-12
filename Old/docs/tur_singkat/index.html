@@ -1,0 +1,250 @@
+<!DOCTYPE html><html lang="id" style=""><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">try{
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary-fixed-variant": "#75340b",
+                      "on-error-container": "#93000a",
+                      "tertiary-fixed-dim": "#ffb691",
+                      "inverse-on-surface": "#e8f2ff",
+                      "secondary-container": "#316fe2",
+                      "primary-fixed": "#88f4f2",
+                      "surface": "#f7f9ff",
+                      "on-tertiary-fixed": "#341100",
+                      "inverse-surface": "#27313c",
+                      "primary-container": "#008281",
+                      "on-surface-variant": "#3d4949",
+                      "error": "#ba1a1a",
+                      "surface-container": "#e4effd",
+                      "surface-container-highest": "#d9e3f1",
+                      "on-primary-fixed": "#002020",
+                      "secondary-fixed": "#d9e2ff",
+                      "on-secondary-fixed-variant": "#00429c",
+                      "on-secondary": "#ffffff",
+                      "on-tertiary": "#ffffff",
+                      "background": "#f7f9ff",
+                      "outline": "#6d7979",
+                      "outline-variant": "#bcc9c8",
+                      "on-primary-container": "#f3fffe",
+                      "on-secondary-container": "#fefcff",
+                      "surface-tint": "#006a69",
+                      "tertiary-container": "#ae6035",
+                      "tertiary": "#8f481f",
+                      "primary": "#006766",
+                      "on-tertiary-container": "#fffbff",
+                      "on-error": "#ffffff",
+                      "inverse-primary": "#6bd7d6",
+                      "on-surface": "#121d26",
+                      "surface-container-high": "#dfe9f7",
+                      "surface-container-lowest": "#ffffff",
+                      "tertiary-fixed": "#ffdbcb",
+                      "on-secondary-fixed": "#001945",
+                      "surface-bright": "#f7f9ff",
+                      "surface-variant": "#d9e3f1",
+                      "secondary": "#0055c7",
+                      "error-container": "#ffdad6",
+                      "primary-fixed-dim": "#6bd7d6",
+                      "on-primary": "#ffffff",
+                      "surface-dim": "#d1dbe8",
+                      "on-background": "#121d26",
+                      "on-primary-fixed-variant": "#00504f",
+                      "surface-container-low": "#edf4ff",
+                      "secondary-fixed-dim": "#b0c6ff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "sm": "12px",
+                      "xs": "8px",
+                      "lg": "24px",
+                      "md": "16px",
+                      "xl": "32px",
+                      "gutter": "16px",
+                      "margin-mobile": "20px",
+                      "base": "4px"
+              },
+              "fontFamily": {
+                      "subtitle-lg": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "label-md": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "headline-md": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "headline-lg": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "body-md": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "body-lg": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "headline-lg-mobile": [
+                              "Plus Jakarta Sans"
+                      ]
+              },
+              "fontSize": {
+                      "subtitle-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "26px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-md": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-md": [
+                              "20px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "22px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      }catch(_e){}</script><meta charset="utf-8"></head><body class="bg-background text-on-background min-h-screen flex flex-col font-sans overflow-hidden">
+<main class="flex-grow flex flex-col relative px-margin-mobile pt-12 pb-8 max-w-md mx-auto w-full">
+<!-- Skip Button -->
+<div class="absolute top-6 right-margin-mobile z-10">
+<button class="text-primary font-label-md text-label-md py-2 px-4 rounded-full hover:bg-surface-variant transition-colors">
+                Lewati
+            </button>
+</div>
+<!-- Carousel Container -->
+<div class="flex flex-col items-center justify-center relative w-full h-full pt-12 gap-lg min-h-[400px]" id="carousel">
+<!-- Slide 1 -->
+<div class="carousel-slide active w-full flex flex-col items-center text-center gap-2"><div class="mb-xl rounded-full bg-primary-container/20 flex items-center justify-center p-8 relative shadow-[0px_4px_20px_rgba(0,103,102,0.05)] h-48 w-48"><img class="w-full h-full object-contain relative z-10" data-alt="A friendly, approachable 2D illustration of 'Saja', a gender-neutral teenage mascot wearing a teal hoodie, excitedly holding an open book surrounded by floating learning icons. The style is modern, soft-edged, vector-based flat design suitable for middle schoolers, featuring a clean white background with subtle light blue ambient shading to create depth. Colors align with the app's teal and light blue palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjCuyPSk5bMjPDt6JjujKU8hC_XVV6FsdO12zt-BaipFg2wUiIzY2JiIeSwlVaPb0tYcttevP9BfeZaI9RoEyCKFJF5McSpOUkt4ETtjHqiteoWj_VyXASpJRKIILy2as-0xdsDDA96-mBB5kCyvAdupPkw3Bv4PiKqpQ-oDqrYHZ1-lE7u4GSFVMVF83ECbNb2tItK5H61dZ4kLY8H1RZKeWbv7-27_1_xaeCI6FuhXr2ppsAqO2KOg"></div><h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-md px-4">Belajar 8 Sesi Seru</h2><p class="font-body-md text-body-md text-on-surface-variant max-w-[280px] px-4 leading-relaxed">Ikuti perjalanan belajar kesehatan yang asyik dan mudah dipahami bareng Saja.</p></div>
+<!-- Slide 2 -->
+<div class="carousel-slide w-full flex flex-col items-center text-center gap-2 hidden"><div class="mb-xl rounded-full bg-secondary-container/20 flex items-center justify-center p-8 relative shadow-[0px_4px_20px_rgba(49,111,226,0.05)] h-48 w-48"><img class="w-full h-full object-contain relative z-10" data-alt="A reassuring 2D illustration of 'Saja', the teenage mascot in a teal hoodie, sitting comfortably and listening attentively to a speech bubble containing a lock icon. The style is soft, vector-based flat design with high-radius organic shapes, indicating a safe, private space for middle schoolers. The background is clean white with soft blue tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUIxOwfra1zgvhmwXOhLO2htdjx1VigGmEhEsZNH7kUpBhhjk0luuZ9SclepNNZDteJ_PYKMSq1neMX33UgKVXizmM1JiI_KnXecc4uWRMxDym_ifHHrmIXTESu5Mt_ny5GAQBqnZLdNMxdVy9Dwo60wyOQka2X3bTlirck_jH9KWqXJqPFQvhVH0OXVc4eUVbOTUWkasYUt__jBd46ZIWNjzibC8c9w4FmVCpRl7eC9XA-pY2vJG4Rg"></div><h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-md px-4">Curhat Aman di Forum</h2><p class="font-body-md text-body-md text-on-surface-variant max-w-[280px] px-4 leading-relaxed">Tanya apa saja tanpa ragu. Privasimu terjaga dan kamu nggak sendirian di sini.</p></div>
+<!-- Slide 3 -->
+<div class="carousel-slide w-full flex flex-col items-center text-center gap-2 hidden"><div class="mb-xl rounded-full bg-tertiary-container/20 flex items-center justify-center p-8 relative shadow-[0px_4px_20px_rgba(174,96,53,0.05)] h-48 w-48"><img class="w-full h-full object-contain relative z-10" data-alt="An encouraging 2D illustration of 'Saja', the mascot in a teal hoodie, proudly holding up a glowing achievement badge or medal. The art style is modern flat vector design with soft curves and friendly appeal for adolescents. The scene is brightly lit against a white background, accented with warm orange and teal brand colors." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQfv9kngaildcPLWUocZCfeweOyqGrroxdNkdc6qIMwWetidERS4l3G2PYOakKWQdFhdcv8YFcvG-qVsq73C2HMoXGeilgHv_u_iE4reBKvyULyxNF1HY1lYp0oKcf0y_6XNgNhRaoDqBmSgcBNOlKzJDKi0pzuB6Teh6lap74L0RfxOhvdIvufo0HAdS1FBlGL5Qxg47nI1GiV76kAOVsavadNAPT4ilx-kZZp6Y0hvsxrxwm1XBXpg"></div><h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-md px-4">Kumpulkan Lencana</h2><p class="font-body-md text-body-md text-on-surface-variant max-w-[280px] px-4 leading-relaxed">Selesaikan misi, kumpulkan poin, dan raih lencana keren sebagai buktimu hebat!</p></div>
+</div>
+<!-- Bottom Controls -->
+<div class="w-full mt-auto flex flex-col items-center pb-md">
+<!-- Progress Dots -->
+<div class="flex gap-2 mb-8 mb-xl" id="dots-container">
+<div class="dot active h-2 w-2 rounded-full bg-surface-variant cursor-pointer" onclick="goToSlide(0)"></div>
+<div class="dot h-2 w-2 rounded-full bg-surface-variant cursor-pointer" onclick="goToSlide(1)"></div>
+<div class="dot h-2 w-2 rounded-full bg-surface-variant cursor-pointer" onclick="goToSlide(2)"></div>
+</div>
+<!-- Action Button -->
+<button class="w-full bg-primary text-on-primary font-subtitle-lg text-subtitle-lg py-4 px-lg rounded-full shadow-[0px_8px_24px_rgba(0,103,102,0.15)] active:scale-95 transition-transform duration-200" id="nextBtn">
+                Lanjut
+            </button>
+</div>
+</main>
+<script>
+        const slides = document.querySelectorAll('.carousel-slide');
+        const dots = document.querySelectorAll('.dot');
+        const nextBtn = document.getElementById('nextBtn');
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            slides[index].classList.add('active');
+            dots[index].classList.add('active');
+            
+            currentSlide = index;
+
+            if (currentSlide === slides.length - 1) {
+                nextBtn.textContent = 'Mulai';
+            } else {
+                nextBtn.textContent = 'Lanjut';
+            }
+        }
+
+        function goToSlide(index) {
+            showSlide(index);
+        }
+
+        nextBtn.addEventListener('click', () => {
+            if (currentSlide < slides.length - 1) {
+                showSlide(currentSlide + 1);
+            } else {
+                // Navigate to next screen (Home/Dashboard)
+                console.log("Navigating to Home...");
+                // window.location.href = 'home.html';
+            }
+        });
+
+        // Add touch swipe support
+        let touchStartX = 0;
+        let touchEndX = 0;
+        const carousel = document.getElementById('carousel');
+
+        carousel.addEventListener('touchstart', e => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, {passive: true});
+
+        carousel.addEventListener('touchend', e => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, {passive: true});
+
+        function handleSwipe() {
+            const threshold = 50;
+            if (touchEndX < touchStartX - threshold) {
+                // Swipe left -> next slide
+                if (currentSlide < slides.length - 1) showSlide(currentSlide + 1);
+            }
+            if (touchEndX > touchStartX + threshold) {
+                // Swipe right -> prev slide
+                if (currentSlide > 0) showSlide(currentSlide - 1);
+            }
+        }
+    </script>
+
+<div id="__proto_nav" style="position:fixed;left:0;right:0;bottom:0;z-index:999999;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 14px;background:rgba(18,29,38,0.92);backdrop-filter:blur(6px);font-family:'Plus Jakarta Sans',-apple-system,sans-serif;">
+  <a href="../buat_nama_samaran/" style="flex:1;text-align:left;color:#fff;text-decoration:none;font-size:13px;font-weight:600;padding:8px 12px;border-radius:20px;background:rgba(255,255,255,0.12);">&larr; Nama Samaran</a>
+  <a href="../index.html" title="Kembali ke Peta Prototype" style="color:#fff;text-decoration:none;font-size:18px;padding:8px 10px;border-radius:20px;background:rgba(255,255,255,0.12);">&#8962;</a>
+  <a href="../intro_pretest/" style="flex:1;text-align:right;color:#fff;text-decoration:none;font-size:13px;font-weight:600;padding:8px 12px;border-radius:20px;background:#006766;">Intro Pretest &rarr;</a>
+</div>
+<div style="height:56px;"></div>
+</body></html>

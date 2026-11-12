@@ -1,0 +1,172 @@
+<!DOCTYPE html><html lang="id" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>SAHAJA - Siap Mulai</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#b0c6ff",
+                        "surface-container-high": "#dfe9f7",
+                        "on-error-container": "#93000a",
+                        "surface": "#f7f9ff",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-highest": "#d9e3f1",
+                        "on-secondary-fixed-variant": "#00429c",
+                        "inverse-primary": "#6bd7d6",
+                        "tertiary-fixed": "#ffdbcb",
+                        "on-surface": "#121d26",
+                        "primary": "#006766",
+                        "on-secondary": "#ffffff",
+                        "surface-tint": "#006a69",
+                        "surface-container-low": "#edf4ff",
+                        "secondary": "#0055c7",
+                        "surface-bright": "#f7f9ff",
+                        "primary-fixed-dim": "#6bd7d6",
+                        "primary-fixed": "#88f4f2",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-container": "#fffbff",
+                        "on-surface-variant": "#3d4949",
+                        "inverse-on-surface": "#e8f2ff",
+                        "on-primary": "#ffffff",
+                        "outline-variant": "#bcc9c8",
+                        "on-primary-fixed": "#002020",
+                        "outline": "#6d7979",
+                        "on-primary-container": "#f3fffe",
+                        "error": "#ba1a1a",
+                        "on-secondary-container": "#fefcff",
+                        "on-secondary-fixed": "#001945",
+                        "on-background": "#121d26",
+                        "surface-container": "#e4effd",
+                        "secondary-container": "#316fe2",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#d9e2ff",
+                        "surface-dim": "#d1dbe8",
+                        "surface-variant": "#d9e3f1",
+                        "on-primary-fixed-variant": "#00504f",
+                        "on-tertiary-fixed": "#341100",
+                        "on-tertiary-fixed-variant": "#75340b",
+                        "tertiary-container": "#ae6035",
+                        "background": "#f7f9ff",
+                        "tertiary": "#8f481f",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed-dim": "#ffb691",
+                        "primary-container": "#008281",
+                        "inverse-surface": "#27313c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "16px",
+                        "xs": "8px",
+                        "xl": "32px",
+                        "sm": "12px",
+                        "md": "16px",
+                        "lg": "24px",
+                        "margin-mobile": "20px",
+                        "base": "4px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "headline-lg-mobile": ["Plus Jakarta Sans"],
+                        "subtitle-lg": ["Plus Jakarta Sans"],
+                        "label-md": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["22px", { "lineHeight": "28px", "fontWeight": "700" }],
+                        "subtitle-lg": ["18px", { "lineHeight": "26px", "fontWeight": "600" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #006766 0%, #00429c 100%);
+        }
+        .blur-blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.5;
+            z-index: 0;
+        }
+        .content-z {
+            z-index: 10;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background h-screen w-screen overflow-hidden flex flex-col justify-center items-center relative gradient-bg">
+<!-- Decorative Blurred Blobs -->
+<div class="blur-blob bg-primary-fixed-dim w-96 h-96 top-[-10%] left-[-10%] animate-[pulse_8s_ease-in-out_infinite]"></div>
+<div class="blur-blob bg-secondary-fixed w-80 h-80 bottom-[-5%] right-[-10%] animate-[pulse_6s_ease-in-out_infinite_alternate]"></div>
+<div class="blur-blob bg-inverse-primary w-64 h-64 top-[40%] left-[60%] animate-[pulse_10s_ease-in-out_infinite]"></div>
+<!-- Main Content Container -->
+<div class="content-z flex flex-col items-center justify-between h-full w-full max-w-md p-margin-mobile">
+<!-- Top Spacer -->
+<div class="flex-1 w-full"></div>
+<!-- Mascot Image -->
+<div class="flex-shrink-0 w-80 h-80 mb-lg relative">
+<img alt="Saja Mascot" class="object-contain w-full h-full drop-shadow-2xl animate-[bounce_3s_ease-in-out_infinite]" data-alt="A friendly, approachable 3D illustration of a teenage mascot named Saja wearing a comfortable teal hoodie. Saja is striking a celebratory, enthusiastic pose with arms wide open or giving a thumbs up, conveying excitement and readiness. The style is modern, soft, and inviting, tailored for early adolescents, with a clean light mode aesthetic, smooth lighting, and a soft shadow underneath on a transparent background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBcROQkkjyg8ib_wNVsol4N8vG8uqxfaVFQsbWlFgDpWNcZU88NxWRNJoz_1OVL6oNSTIFzbDBOq9g-9sJSSszha51GDz55ZDhiVqN5fP4yF8LJjeTVZP2ttfQ1ecFvRUYUpEl6efrbaWAyew91B-RmrUKx0aiBi2UMi8rvAFOKzqTdMztVz_PmTf5QVZwqTN2ljOeTxl6CvIoYBOgWA4nRjrFEWsVqSQKGR0Fm32-bOrhojC7tJROx1Uy-q7ubnj49cc">
+</div>
+<!-- Text Content -->
+<div class="text-center mb-xl flex flex-col items-center gap-xs">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-primary text-balance">
+                Siap Mulai Perjalananmu?
+            </h1>
+<p class="font-body-lg text-body-lg text-on-primary/80 text-balance max-w-xs">
+                Sahabat Remaja Jaga Diri
+            </p>
+</div>
+<!-- Bottom Controls -->
+<div class="w-full flex flex-col items-center gap-lg mt-auto pb-lg">
+<!-- Step Indicators -->
+<div class="flex gap-2 mb-md">
+<div class="w-2 h-2 rounded-full bg-on-primary/30 transition-all duration-300"></div>
+<div class="w-2 h-2 rounded-full bg-on-primary/30 transition-all duration-300"></div>
+<div class="w-8 h-2 rounded-full bg-on-primary transition-all duration-300"></div>
+</div>
+<!-- Call to Action Button -->
+<button class="w-full bg-tertiary text-on-tertiary font-headline-md text-headline-md py-5 px-6 rounded-full shadow-[0px_8px_24px_rgba(0,0,0,0.25)] active:scale-95 transition-transform duration-200 flex justify-center items-center gap-2 group hover:shadow-[0px_12px_32px_rgba(0,0,0,0.35)]">
+                Mulai Sekarang
+                <span class="material-symbols-outlined text-on-tertiary group-hover:translate-x-1 transition-transform duration-200">
+                    arrow_forward
+                </span>
+</button>
+</div>
+</div>
+
+
+
+<div id="__proto_nav" style="position:fixed;left:0;right:0;bottom:0;z-index:999999;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 14px;background:rgba(18,29,38,0.92);backdrop-filter:blur(6px);font-family:'Plus Jakarta Sans',-apple-system,sans-serif;">
+  <a href="../splash_walkthrough_2_v2/" style="flex:1;text-align:left;color:#fff;text-decoration:none;font-size:13px;font-weight:600;padding:8px 12px;border-radius:20px;background:rgba(255,255,255,0.12);">&larr; Splash & Walkthrough</a>
+  <a href="../index.html" title="Kembali ke Peta Prototype" style="color:#fff;text-decoration:none;font-size:18px;padding:8px 10px;border-radius:20px;background:rgba(255,255,255,0.12);">&#8962;</a>
+  <a href="../masukkan_kode_aktivasi/" style="flex:1;text-align:right;color:#fff;text-decoration:none;font-size:13px;font-weight:600;padding:8px 12px;border-radius:20px;background:#006766;">Kode Aktivasi &rarr;</a>
+</div>
+<div style="height:56px;"></div>
+</body></html>
