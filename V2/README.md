@@ -9,8 +9,10 @@ Repo aplikasi SAHAJA (Sahabat Remaja Jaga Diri), media intervensi disertasi dr. 
 | `Rencana Apps/` | Dokumen produk 00 sampai 13. Mulai dari `00 README.md` |
 | `AGENTS.md` | Aturan kerja untuk Codex dan alat pengembang AI lain |
 | `CLAUDE.md` | Pintu masuk Claude Code (memuat `AGENTS.md`) |
-| `STATUS.md` | Catatan serah terima antarsesi dan antaralat |
+| `STATUS.md` | Catatan serah terima antarsesi dan antaralat, satu-satunya catatan status yang mengikat |
+| `GEMINI.md`, `.agent/rules/` | Penunjuk untuk Antigravity dan Gemini (memuat `AGENTS.md`) |
 | `agen/` | Lima peran peninjau: model, desain, privasi, konten, penguji |
+| `agen/serah-terima.md` | Protokol membuka dan menutup sesi, berlaku untuk semua alat |
 | `agen/claude-code/` | Subagen dan perintah Claude Code, perlu disalin sekali ke `.claude/` |
 
 ## Cara memulai sesi kerja dengan alat pengembang AI
@@ -24,12 +26,12 @@ cp -R agen/claude-code/agents agen/claude-code/commands .claude/
 
 Setelah itu buka folder `V2` di Claude Code dan ketik `/mulai M0-02` (atau kode tugas lain).
 
-Codex atau alat lain: buka folder `V2`, lalu beri perintah pembuka berikut.
+Antigravity, Gemini, Codex, atau alat lain: buka folder `V2` (atau akar repo), lalu beri perintah pembuka berikut. Perintah pembuka lain ada di `agen/serah-terima.md` bagian 6.
 
 ```
-Baca AGENTS.md dan STATUS.md. Kerjakan paket tugas M0-02 dari
-"Rencana Apps/08 Task dan Roadmap.md" mengikuti alur kerja di AGENTS.md bagian 8.
-Sebelum melapor selesai, tinjau dengan agen/penguji.md dan perbarui STATUS.md.
+Baca AGENTS.md dan agen/serah-terima.md, lalu ikuti bagian 2 untuk membuka sesi.
+Kerjakan paket tugas M0-02 dari "Rencana Apps/08 Task dan Roadmap.md".
+Sebelum melapor selesai, tinjau dengan agen/penguji.md dan tutup sesi sesuai bagian 4.
 ```
 
 Untuk meminta tinjauan saja:
