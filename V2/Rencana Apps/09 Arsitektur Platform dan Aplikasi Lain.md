@@ -1,6 +1,6 @@
 # Arsitektur Platform dan Aplikasi Lain
 
-Versi 2.1, 11 November 2026. Dokumen ini menjawab dua kebutuhan: (1) apa saja yang harus lengkap supaya S2, S3, dan S4 bisa dikembangkan dengan mutu yang sama dengan S1; dan (2) bagaimana model disertasi dr. Henky disiapkan menjadi platform untuk sekolah, jenjang, dan topik lain tanpa mengganggu penelitian.
+Versi 2.2, 12 November 2026: bagian backend disesuaikan dengan keputusan T10, isi lain tetap versi 2.1 (11 November 2026). Dokumen ini menjawab dua kebutuhan: (1) apa saja yang harus lengkap supaya S2, S3, dan S4 bisa dikembangkan dengan mutu yang sama dengan S1; dan (2) bagaimana model disertasi dr. Henky disiapkan menjadi platform untuk sekolah, jenjang, dan topik lain tanpa mengganggu penelitian.
 
 ## 1. Yang digeneralisasi adalah modelnya
 

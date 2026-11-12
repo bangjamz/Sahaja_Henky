@@ -15,7 +15,7 @@ Repo aplikasi SAHAJA (Sahabat Remaja Jaga Diri), media intervensi disertasi dr. 
 
 ## Cara memulai sesi kerja dengan alat pengembang AI
 
-Claude Code: pasang subagen dan perintah sekali saja dengan menjalankan perintah berikut dari folder `V2`.
+Claude Code: subagen dan perintah sudah terpasang di `.claude/` (12 November 2026). Jalankan ulang perintah berikut dari folder `V2` hanya bila isi `agen/claude-code/` berubah.
 
 ```
 mkdir -p .claude
