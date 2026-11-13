@@ -1,0 +1,15 @@
+{
+  "name": "cek-teks",
+  "private": true,
+  "type": "module",
+  "bin": { "cek-teks": "./bin.mjs" },
+  "scripts": {
+    "uji": "vitest run",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "@sahaja/config": "workspace:*",
+    "eslint": "9.39.5",
+    "vitest": "5.1.0"
+  }
+}
