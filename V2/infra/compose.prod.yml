@@ -1,0 +1,50 @@
+# Tambahan untuk staging dan produksi di VPS bersama (dokumen 13).
+# Nama proyek diberikan saat deploy: `-p sahaja-staging` atau `-p sahaja-prod`.
+# Belum diuji. Penyiapan server dikerjakan di M0-11 setelah isi VPS diperiksa.
+services:
+  php:
+    restart: unless-stopped
+    environment:
+      APP_ENV: production
+      APP_DEBUG: 'false'
+    deploy:
+      resources:
+        limits: { cpus: '1.0', memory: 768M }
+
+  queue:
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits: { cpus: '0.5', memory: 384M }
+
+  scheduler:
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits: { cpus: '0.25', memory: 256M }
+
+  web:
+    restart: unless-stopped
+    # Disambungkan ke jaringan reverse proxy yang sudah ada di VPS; tidak membuka port ke host.
+    networks: [internal, proxy]
+    deploy:
+      resources:
+        limits: { cpus: '0.5', memory: 256M }
+
+  db:
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits: { cpus: '1.0', memory: 1G }
+
+  redis:
+    restart: unless-stopped
+    command: ['redis-server', '--maxmemory', '128mb', '--maxmemory-policy', 'allkeys-lru']
+    deploy:
+      resources:
+        limits: { cpus: '0.25', memory: 192M }
+
+networks:
+  proxy:
+    external: true
+    name: ${PROXY_NETWORK:?isi nama jaringan reverse proxy VPS di infra/.env}

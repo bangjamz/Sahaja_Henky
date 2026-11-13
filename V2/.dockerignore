@@ -1,0 +1,20 @@
+# Konteks build Docker adalah folder V2. Rahasia dan dependensi lokal tidak boleh ikut ke citra.
+**/.env
+**/.env.*
+!**/.env.example
+**/node_modules
+**/dist
+**/.turbo
+backend/vendor
+backend/storage/logs
+backend/storage/framework/cache
+backend/storage/framework/sessions
+backend/storage/framework/views
+Rencana Apps
+agen
+apps
+packages
+tools
+e2e
+test-results
+playwright-report

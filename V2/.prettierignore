@@ -1,0 +1,7 @@
+Rencana Apps/
+agen/
+backend/
+pnpm-lock.yaml
+*.md
+packages/api/src/schema.d.ts
+packages/api/openapi.json

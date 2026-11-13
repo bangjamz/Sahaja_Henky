@@ -1,0 +1,21 @@
+{
+  "name": "@sahaja/api",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "tipe:buat": "openapi-typescript openapi.json -o src/schema.d.ts",
+    "tipe": "tsc --noEmit",
+    "lint": "eslint .",
+    "uji": "vitest run"
+  },
+  "devDependencies": {
+    "@sahaja/config": "workspace:*",
+    "eslint": "9.39.5",
+    "openapi-typescript": "7.13.0",
+    "typescript": "5.9.3",
+    "vitest": "5.1.0"
+  }
+}

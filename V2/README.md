@@ -1,6 +1,6 @@
 # SAHAJA V2
 
-Repo aplikasi SAHAJA (Sahabat Remaja Jaga Diri), media intervensi disertasi dr. Henky Yoga Prasetya. Saat ini repo berisi dokumen perancangan versi 2.2 (12 November 2026). Tech stack: React (PWA, TWA untuk Android) dan Laravel dengan PostgreSQL dalam Docker Compose di VPS Hostinger. Kode aplikasi dimulai pada tugas M0-02.
+Repo aplikasi SAHAJA (Sahabat Remaja Jaga Diri), media intervensi disertasi dr. Henky Yoga Prasetya. Berisi dokumen perancangan versi 2.2 dan kode fondasi aplikasi (tonggak M0, mulai 13 November 2026). Tech stack: React (PWA, TWA untuk Android) dan Laravel dengan PostgreSQL dalam Docker Compose di VPS Hostinger.
 
 ## Isi
 
@@ -14,6 +14,24 @@ Repo aplikasi SAHAJA (Sahabat Remaja Jaga Diri), media intervensi disertasi dr. 
 | `agen/` | Lima peran peninjau: model, desain, privasi, konten, penguji |
 | `agen/serah-terima.md` | Protokol membuka dan menutup sesi, berlaku untuk semua alat |
 | `agen/claude-code/` | Subagen dan perintah Claude Code, perlu disalin sekali ke `.claude/` |
+| `apps/siswa`, `apps/pendamping` | Frontend React S1 dan S2 |
+| `backend/` | Laravel: API, Situs SAHAJA (Blade), uji Pest. Lihat `backend/README.md` |
+| `packages/` | `tokens`, `ui`, `api`, `config` (paket bersama frontend) |
+| `infra/` | Docker Compose dan Dockerfile |
+| `tools/` | `cek-teks` (pemeriksa aturan tulis) dan penghubung perintah backend |
+| `e2e/` | Uji Playwright: responsif, papan ketik, offline, aksesibilitas |
+
+## Menjalankan kode
+
+Butuh Node 22 ke atas dan pnpm 10. Backend butuh Docker, atau PHP 8.4 dan PostgreSQL bila tanpa Docker (rincian di `backend/README.md`).
+
+```
+pnpm install
+pnpm dev --filter siswa        # http://localhost:5173 (katalog komponen di /katalog)
+pnpm dev --filter pendamping   # http://localhost:5174
+pnpm cek                       # tipe, lint, uji unit, aturan tulis, Pint, Larastan, Pest
+pnpm uji:alur                  # Playwright
+```
 
 ## Cara memulai sesi kerja dengan alat pengembang AI
 

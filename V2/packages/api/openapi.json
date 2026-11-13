@@ -1,0 +1,279 @@
+{
+    "openapi": "3.1.2",
+    "info": {
+        "title": "SAHAJA",
+        "version": "0.0.1"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:8000/api"
+        }
+    ],
+    "paths": {
+        "/kelas/{kelas}": {
+            "get": {
+                "operationId": "kelas.show",
+                "summary": "Ringkasan satu kelas untuk staf yang punya peran di cakupan kelas itu",
+                "tags": [
+                    "Kelas"
+                ],
+                "parameters": [
+                    {
+                        "name": "kelas",
+                        "in": "path",
+                        "required": true,
+                        "description": "The kelas ID",
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "`KelasResource`",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "data": {
+                                            "$ref": "#/components/schemas/KelasResource"
+                                        }
+                                    },
+                                    "required": [
+                                        "data"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "403": {
+                        "$ref": "#/components/responses/AuthorizationException"
+                    },
+                    "404": {
+                        "$ref": "#/components/responses/ModelNotFoundException"
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/AuthenticationException"
+                    }
+                }
+            }
+        },
+        "/siswa/saya": {
+            "get": {
+                "operationId": "siswa.saya",
+                "summary": "Data siswa yang sedang masuk",
+                "tags": [
+                    "SiswaSaya"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "`SiswaSayaResource`",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "data": {
+                                            "$ref": "#/components/schemas/SiswaSayaResource"
+                                        }
+                                    },
+                                    "required": [
+                                        "data"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/AuthenticationException"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "KelasResource": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "school": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "integer"
+                            },
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "id",
+                            "name"
+                        ]
+                    },
+                    "cohort": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "integer"
+                            },
+                            "arm": {
+                                "type": "string",
+                                "enum": [
+                                    "experiment",
+                                    "control",
+                                    "pilot",
+                                    "survey",
+                                    "demo"
+                                ]
+                            },
+                            "start_date": {
+                                "type": "string"
+                            },
+                            "posttest_week": {
+                                "type": "integer"
+                            }
+                        },
+                        "required": [
+                            "id",
+                            "arm",
+                            "start_date",
+                            "posttest_week"
+                        ]
+                    },
+                    "student_count": {
+                        "type": "integer",
+                        "minimum": 0
+                    }
+                },
+                "required": [
+                    "id",
+                    "name",
+                    "school",
+                    "cohort",
+                    "student_count"
+                ],
+                "title": "KelasResource"
+            },
+            "SiswaSayaResource": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "pseudonym": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "avatar": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "status": {
+                        "type": "string"
+                    },
+                    "class_name": {
+                        "type": "string"
+                    },
+                    "arm": {
+                        "type": "string",
+                        "description": "Klien perlu lengan kohort untuk menampilkan mode kontrol (layar A-35).",
+                        "enum": [
+                            "experiment",
+                            "control",
+                            "pilot",
+                            "survey",
+                            "demo"
+                        ]
+                    },
+                    "assent_at": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    }
+                },
+                "required": [
+                    "id",
+                    "pseudonym",
+                    "avatar",
+                    "status",
+                    "class_name",
+                    "arm",
+                    "assent_at"
+                ],
+                "title": "SiswaSayaResource"
+            }
+        },
+        "responses": {
+            "AuthenticationException": {
+                "description": "Unauthenticated",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "message": {
+                                    "type": "string",
+                                    "description": "Error overview."
+                                }
+                            },
+                            "required": [
+                                "message"
+                            ]
+                        }
+                    }
+                }
+            },
+            "AuthorizationException": {
+                "description": "Authorization error",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "message": {
+                                    "type": "string",
+                                    "description": "Error overview."
+                                }
+                            },
+                            "required": [
+                                "message"
+                            ]
+                        }
+                    }
+                }
+            },
+            "ModelNotFoundException": {
+                "description": "Not found",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "message": {
+                                    "type": "string",
+                                    "description": "Error overview."
+                                }
+                            },
+                            "required": [
+                                "message"
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
