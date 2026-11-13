@@ -1,0 +1,68 @@
+# Layanan bersama dev, staging, dan produksi (dokumen 04 bagian 1).
+# Semua layanan berada di jaringan internal proyek ini. Basis data dan Redis tidak membuka port ke luar.
+services:
+  php:
+    build:
+      context: ..
+      dockerfile: infra/docker/php/Dockerfile
+    env_file: ../backend/.env
+    environment:
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_DATABASE: ${DB_DATABASE:-sahaja}
+      DB_USERNAME: ${DB_USERNAME:-sahaja}
+      DB_PASSWORD: ${DB_PASSWORD:?isi DB_PASSWORD di infra/.env}
+      REDIS_HOST: redis
+      CACHE_STORE: redis
+      QUEUE_CONNECTION: redis
+      SESSION_DRIVER: redis
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_started
+    networks: [internal]
+
+  web:
+    build:
+      context: ..
+      dockerfile: infra/docker/web/Dockerfile
+    depends_on: [php]
+    networks: [internal]
+
+  queue:
+    extends: php
+    command: ['php', 'artisan', 'queue:work', '--sleep=3', '--tries=3', '--max-time=3600']
+
+  scheduler:
+    extends: php
+    command: ['php', 'artisan', 'schedule:work']
+
+  db:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: ${DB_DATABASE:-sahaja}
+      POSTGRES_USER: ${DB_USERNAME:-sahaja}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:?isi DB_PASSWORD di infra/.env}
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}']
+      interval: 5s
+      retries: 10
+    networks: [internal]
+
+  redis:
+    image: redis:7-alpine
+    volumes:
+      - redis-data:/data
+    networks: [internal]
+
+  # Laravel Reverb (WebSocket Mode Kelas) ditambahkan di M3-01 bersama paketnya.
+
+networks:
+  internal:
+
+volumes:
+  db-data:
+  redis-data:

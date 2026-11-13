@@ -1,0 +1,4 @@
+{
+  "extends": "@sahaja/config/tsconfig.base.json",
+  "include": ["src"]
+}

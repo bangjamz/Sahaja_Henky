@@ -1,0 +1,22 @@
+# Tambahan untuk Mac pengembang (Docker Desktop atau OrbStack). Data selalu sintetis.
+name: sahaja-dev
+
+services:
+  php:
+    volumes:
+      - ../backend:/var/www/backend
+    environment:
+      APP_ENV: local
+      APP_DEBUG: 'true'
+
+  web:
+    volumes:
+      - ../backend/public:/var/www/backend/public:ro
+    # API dan Situs SAHAJA di http://localhost:8000. Aplikasi React berjalan lewat `pnpm dev`.
+    ports:
+      - '127.0.0.1:8000:80'
+
+  db:
+    # Hanya untuk alat basis data di Mac, terikat ke localhost.
+    ports:
+      - '127.0.0.1:5432:5432'
