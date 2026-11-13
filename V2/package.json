@@ -1,0 +1,29 @@
+{
+  "name": "sahaja",
+  "private": true,
+  "packageManager": "pnpm@10.10.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "cek": "pnpm cek:frontend && pnpm cek:teks && pnpm cek:backend",
+    "cek:frontend": "turbo run tipe lint uji",
+    "cek:teks": "node tools/cek-teks/bin.mjs",
+    "cek:backend": "node tools/backend.mjs cek",
+    "uji:akses": "node tools/backend.mjs uji:akses",
+    "uji:alur": "playwright test",
+    "api:tipe": "node tools/backend.mjs api:tipe",
+    "infra:up": "docker compose -f infra/compose.yml -f infra/compose.dev.yml --env-file infra/.env up -d",
+    "infra:down": "docker compose -f infra/compose.yml -f infra/compose.dev.yml --env-file infra/.env down",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.14.0",
+    "@playwright/test": "1.65.0",
+    "prettier": "3.10.1",
+    "turbo": "2.11.11",
+    "typescript": "5.9.3"
+  }
+}
