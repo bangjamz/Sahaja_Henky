@@ -6,7 +6,7 @@ Catatan serah terima antarsesi dan antaralat, dan satu-satunya catatan status ya
 
 Diperbarui: 13 November 2026, oleh Claude Code (Claude Opus 5.5), sesi bersama Pak Indra.
 
-- Tahap: fondasi kode (tonggak M0). Paket M0-02 sampai M0-07 dikerjakan di cabang `fitur/m0-fondasi` dan menunggu digabung.
+- Tahap: fondasi kode (tonggak M0). Paket M0-02 sampai M0-07 selesai dan digabung ke `main` lewat PR #4 (13 November 2026).
 - M0-02 monorepo: pnpm workspace, Turborepo, TypeScript strict, ESLint, Prettier, perintah `pnpm cek`. Berkas CI GitHub Actions `.github/workflows/cek.yml` sudah ditulis di folder kerja tetapi belum dikomit, karena token `gh` di Mac tidak punya izin `workflow` sehingga GitHub menolak push berkas itu. CI belum pernah berjalan.
 - M0-03 `packages/tokens`: token dokumen 02 sebagai satu sumber, dibuat otomatis menjadi CSS Tailwind dan CSS untuk Blade. Uji kontras warna lulus.
 - M0-04 `packages/ui`: Tombol, Kartu, Isian, Chip, Dialog dan lembar bawah, Label Status, Keadaan Layar, Pita Offline, tata letak Imersif. Katalog komponen di `/katalog` aplikasi siswa (hanya mode pengembangan).
@@ -27,7 +27,8 @@ Diperbarui: 13 November 2026, oleh Claude Code (Claude Opus 5.5), sesi bersama P
 
 - Repo GitHub: `bangjamz/Sahaja_Henky`, cabang utama `main`.
 - PR yang digabung ke `main` per 12 November 2026: #1 (V2 dan pemindahan draft lama ke `Old/`), #2 (penyelarasan label versi), #3 (protokol serah terima). Untuk keadaan terbaru, periksa riwayat git.
-- Cabang terbuka: `fitur/m0-fondasi` (M0-02 sampai M0-07), PR #4 menunggu tinjauan Pak Indra. Paket digabung dalam satu cabang dengan satu komit per paket, menyimpang dari aturan satu tugas satu cabang di dokumen 10 bagian 1 supaya fondasi bisa ditinjau sekaligus.
+- PR #4 (fondasi M0-02 sampai M0-07) digabung ke `main` pada 13 November 2026.
+- Cabang terbuka: tidak ada. Paket M0 dikerjakan dalam satu cabang dengan satu komit per paket, menyimpang dari aturan satu tugas satu cabang di dokumen 10 bagian 1 supaya fondasi bisa ditinjau sekaligus.
 - Galeri prototipe GitHub Pages disajikan dari `docs/` dan diperiksa tampil pada 12 November 2026.
 
 ## Sedang dikerjakan
@@ -51,15 +52,14 @@ Dua hal untuk dicek di luar repo:
 
 ## Langkah berikutnya
 
-1. Pak Indra meninjau dan menggabungkan PR fondasi M0.
-2. Pak Indra menjalankan `gh auth refresh -s workflow` di Terminal (login ulang di browser), lalu berkas `.github/workflows/cek.yml` dikomit lewat PR terpisah dan hasil CI pertama diperiksa.
-3. Pasang Docker Desktop atau OrbStack, salin `infra/.env.example` menjadi `infra/.env`, jalankan `pnpm infra:up`, dan catat hasilnya (bukti M0-06).
-4. Pak Indra menetapkan keputusan yang menghambat (D1, D2, D4, D10, D11). M1-01 (aktivasi) dan M1-04 (instrumen) menunggu D1 dan isi L05.
-5. Paket M1 yang tidak terhambat keputusan: M1-02 (service worker, bisa dipasang), M1-03 (antrean sinkron), M1-05 (masuk staf dengan Fortify, penyaringan menu S2 menurut peran), M1-07 (skema konten dengan satu sesi [CONTOH]).
-6. M0-10: mulai urus akun Google Play organisasi (D-U-N-S), domain, dan email resmi. Prosesnya lama, jadi sebaiknya berjalan bersamaan dengan langkah lain.
-7. M0-08: prototipe klik ponsel dan desktop dari prompt di dokumen 02.
-8. M0-09: papan gaya, ikon aplikasi, lembar karakter maskot.
-9. M0-11 dan M0-12: Claude Code memeriksa isi VPS (hanya membaca) lalu menyiapkan staging, cadangan, dan pemantauan. Butuh akses SSH dari Pak Indra.
+1. Pak Indra menjalankan `gh auth refresh -s workflow` di Terminal (login ulang di browser), lalu berkas `.github/workflows/cek.yml` dikomit lewat PR terpisah dan hasil CI pertama diperiksa.
+2. Pasang Docker Desktop atau OrbStack, salin `infra/.env.example` menjadi `infra/.env`, jalankan `pnpm infra:up`, dan catat hasilnya (bukti M0-06).
+3. Pak Indra menetapkan keputusan yang menghambat (D1, D2, D4, D10, D11). M1-01 (aktivasi) dan M1-04 (instrumen) menunggu D1 dan isi L05.
+4. Paket M1 yang tidak terhambat keputusan: M1-02 (service worker, bisa dipasang), M1-03 (antrean sinkron), M1-05 (masuk staf dengan Fortify, penyaringan menu S2 menurut peran), M1-07 (skema konten dengan satu sesi [CONTOH]).
+5. M0-10: mulai urus akun Google Play organisasi (D-U-N-S), domain, dan email resmi. Prosesnya lama, jadi sebaiknya berjalan bersamaan dengan langkah lain.
+6. M0-08: prototipe klik ponsel dan desktop dari prompt di dokumen 02.
+7. M0-09: papan gaya, ikon aplikasi, lembar karakter maskot.
+8. M0-11 dan M0-12: Claude Code memeriksa isi VPS (hanya membaca) lalu menyiapkan staging, cadangan, dan pemantauan. Butuh akses SSH dari Pak Indra.
 
 ## Riwayat
 
