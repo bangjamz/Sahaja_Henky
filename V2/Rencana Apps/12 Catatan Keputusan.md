@@ -63,3 +63,32 @@ Konteks: Supabase gratis menjeda proyek yang sepi dan kapasitasnya terbatas, seh
 Pilihan: Supabase berbayar; Supabase dihos sendiri (terlalu banyak kontainer); Laravel dan PostgreSQL di VPS sendiri.
 Keputusan: Laravel dan PostgreSQL dalam Docker Compose di VPS milik Pak Indra, ditetapkan Pak Indra.
 Akibat: RLS diganti Policy Laravel dengan uji akses wajib; Auth memakai Sanctum dan Fortify; realtime memakai Reverb; cadangan, pemantauan, dan perawatan server menjadi tanggung jawab proyek (file 13); VPS dipakai bersama aplikasi lain sehingga SAHAJA wajib terisolasi dan tidak boleh menyentuh milik aplikasi lain. Dokumen 01, 04, 08, 09, 10, 11, AGENTS.md, dan peran peninjau disesuaikan.
+
+### Versi pustaka dan citra yang dikunci saat M0-02 (13 November 2026)
+Dokumen 04 bagian 2 meminta versi dikunci saat M0-02 dan dicatat di sini. Daftar ini adalah catatan versi, bukan keputusan baru. Menaikkan versi mayor atau menambah pustaka tetap memerlukan catatan keputusan baru.
+
+| Bagian | Pustaka atau citra | Versi |
+|---|---|---|
+| Monorepo | pnpm, Turborepo, Node | 10.10.0, 2.11.11, 22 ke atas |
+| Bahasa | TypeScript | 5.9.3 |
+| Frontend | React, React DOM, React Router | 19.3.1, 19.3.1, 8.5.1 |
+| Frontend | Vite, @vitejs/plugin-react | 8.3.8, 6.3.0 |
+| Frontend | Tailwind CSS, @tailwindcss/vite | 4.3.5 |
+| Frontend | Radix Dialog, Lucide | 1.3.1, 1.72.0 |
+| Frontend | Fon Plus Jakarta Sans (paket @fontsource-variable, dihos sendiri) | 5.3.0 |
+| Mutu | ESLint, typescript-eslint, jsx-a11y, react-hooks, Prettier | 9.39.5, 8.72.2, 6.10.2, 7.1.1, 3.10.1 |
+| Uji frontend | Vitest, Testing Library, jsdom | 5.1.0, 16.3.3, 31.0.0 |
+| Uji alur | Playwright, @axe-core/playwright | 1.65.0, 4.14.0 |
+| Kontrak API | openapi-typescript | 7.13.0 |
+| Backend | PHP, Laravel | 8.4, 13.42.0 |
+| Backend | Sanctum, Scramble | 4.4.0, 0.13.53 |
+| Mutu backend | Pint, Larastan (PHPStan) | 1.32.3, 3.15.0 (2.3.5) |
+| Uji backend | Pest, pest-plugin-laravel | 4.7.8, 4.1.0 |
+| Citra Docker | php-fpm, composer, nginx, postgres, redis | 8.4-fpm-alpine, 2.8, 1.29-alpine, 17-alpine, 7-alpine |
+
+Alasan memilih versi yang bukan terbaru:
+- TypeScript 5.9, bukan 7.0: openapi-typescript dan typescript-eslint belum mendukung TypeScript 7.
+- ESLint 9, bukan 10: eslint-plugin-jsx-a11y belum mendukung ESLint 10.
+- PHP 8.4: lock file Composer membutuhkan PHP 8.4 (Symfony Console terbaru), di atas syarat minimal Laravel 13.
+
+Pustaka di dokumen 04 yang belum dipasang karena belum dipakai: TanStack Query, Zustand, Dexie, Zod, vite-plugin-pwa, Laravel Echo, Fortify, Reverb, Pulse, dompdf, webpush. Masing-masing dipasang pada paket tugas yang memakainya.

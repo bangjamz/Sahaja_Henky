@@ -78,7 +78,7 @@ Bila dua sumber bertentangan, yang lebih atas menang. Pertentangan dicatat di `S
 | Konten | Validasi skema dan pemeriksa kemiripan butir | Semua berkas konten |
 | Aturan tulis | `tools/cek-teks` | Kamus teks, konten, dokumen |
 
-Perintah tunggal: `pnpm cek` menjalankan pemeriksaan tipe, lint, uji unit frontend, validasi konten, pemeriksa aturan tulis, serta Pint, Larastan, dan Pest di kontainer backend. `pnpm uji:alur` menjalankan Playwright terhadap lingkungan Docker lokal.
+Perintah tunggal: `pnpm cek` menjalankan pemeriksaan tipe, lint, uji unit frontend, validasi konten, pemeriksa aturan tulis, serta Pint, Larastan, dan Pest (memakai PHP lokal bila ada, bila tidak memakai kontainer backend). `pnpm uji:alur` menjalankan Playwright terhadap lingkungan Docker lokal.
 
 ## 5. Git
 
