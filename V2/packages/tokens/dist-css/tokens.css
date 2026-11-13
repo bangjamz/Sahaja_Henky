@@ -1,0 +1,85 @@
+/* Dibuat otomatis dari packages/tokens/src/index.ts. Jangan diubah langsung. */
+:root {
+  --sj-color-primary: #0E9594;
+  --sj-color-primary-strong: #006766;
+  --sj-color-primary-soft: #E3F4F4;
+  --sj-color-secondary: #2D6CDF;
+  --sj-color-secondary-soft: #E7EFFC;
+  --sj-color-accent: #F5B841;
+  --sj-color-success: #2FBF71;
+  --sj-color-success-strong: #1B7F4B;
+  --sj-color-caution: #E8871E;
+  --sj-color-caution-soft: #FCEFDD;
+  --sj-color-danger: #C2410C;
+  --sj-color-bg: #F7F9FB;
+  --sj-color-surface: #FFFFFF;
+  --sj-color-border: #E3E8EE;
+  --sj-color-text: #1F2933;
+  --sj-color-text-muted: #5B6770;
+  --sj-color-on-primary: #FFFFFF;
+  --sj-text-display: 1.75rem;
+  --sj-text-display-lh: 2.125rem;
+  --sj-text-display-weight: 800;
+  --sj-text-title: 1.375rem;
+  --sj-text-title-lh: 1.75rem;
+  --sj-text-title-weight: 700;
+  --sj-text-heading: 1.125rem;
+  --sj-text-heading-lh: 1.5rem;
+  --sj-text-heading-weight: 700;
+  --sj-text-body: 1rem;
+  --sj-text-body-lh: 1.5rem;
+  --sj-text-body-weight: 400;
+  --sj-text-body-strong: 1rem;
+  --sj-text-body-strong-lh: 1.5rem;
+  --sj-text-body-strong-weight: 600;
+  --sj-text-small: 0.875rem;
+  --sj-text-small-lh: 1.25rem;
+  --sj-text-small-weight: 400;
+  --sj-text-label: 0.8125rem;
+  --sj-text-label-lh: 1rem;
+  --sj-text-label-weight: 600;
+  --sj-text-kelas-judul: 3rem;
+  --sj-text-kelas-judul-lh: 3.5rem;
+  --sj-text-kelas-judul-weight: 800;
+  --sj-font-sans: 'Plus Jakarta Sans Variable', system-ui, sans-serif;
+  --sj-radius-card: 1.25rem;
+  --sj-radius-button: 1rem;
+  --sj-radius-input: 0.75rem;
+  --sj-screen-margin: 1.25rem;
+  --sj-touch-min: 3rem;
+  --sj-elevation-1: 0 4px 20px rgba(31, 41, 51, 0.05);
+  --sj-elevation-2: 0 8px 28px rgba(31, 41, 51, 0.10);
+  --sj-motion-fast: 120ms;
+  --sj-motion-base: 220ms;
+  --sj-motion-slow: 600ms;
+  --sj-easing: cubic-bezier(0.2, 0, 0, 1);
+}
+@media (min-width: 600px) {
+  :root {
+    --sj-screen-margin: 1.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  :root {
+    --sj-screen-margin: 2rem;
+    --sj-text-display: 2.25rem;
+    --sj-text-display-lh: 2.75rem;
+    --sj-text-title: 1.625rem;
+    --sj-text-title-lh: 2rem;
+    --sj-text-heading: 1.25rem;
+    --sj-text-heading-lh: 1.75rem;
+    --sj-text-body: 1rem;
+    --sj-text-body-lh: 1.625rem;
+    --sj-text-body-strong: 1rem;
+    --sj-text-body-strong-lh: 1.625rem;
+    --sj-text-kelas-judul: 4rem;
+    --sj-text-kelas-judul-lh: 4.5rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --sj-motion-fast: 0ms;
+    --sj-motion-base: 0ms;
+    --sj-motion-slow: 0ms;
+  }
+}
